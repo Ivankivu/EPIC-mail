@@ -19,8 +19,8 @@ nav>ul{
 nav>ul>li{
     margin:0;
     padding:0;
+
     float: right;
-    display: inline-block;
     list-style-type: none;
     width:80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -75,7 +75,9 @@ padding:5px;
 /** sign in **/
 
 .container2{
-    background-image: url(/feature/img/email-770x384.jpg);
+    background-image: url(/UI/img/email-770x384.jpg);
+    height:100%;
+    padding:16px;
 }
 
 .box2{
