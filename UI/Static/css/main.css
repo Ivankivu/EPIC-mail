@@ -1,13 +1,13 @@
 body {
     overflow: hidden;
     margin: 0;
+    background-image: url(img/email-laptop-computer-marketing-ss-1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container,.container2,.container3 {
     display: flex;
-    background-image: url(/UI/img/email-770x384.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 100%;
     height: 100%;
     padding: 16px;
@@ -20,7 +20,7 @@ nav {
     display: flex;
     flex-direction: row;
     padding: 0 100px;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.363);
 }
 
 nav>h1 {
@@ -102,10 +102,6 @@ nav>ul>li>a {
 
 
 /** sign in **/
-
-
-
-
 .container3 > .box2{
     margin:20px;
 }
@@ -180,6 +176,6 @@ footer {
     /**background-color: rgb(243, 222, 194);**/
     padding: 1px 20px;
     text-align: center;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.363);
     color:black;
 }
