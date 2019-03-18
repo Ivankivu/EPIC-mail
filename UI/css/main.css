@@ -14,7 +14,7 @@ body {
 
 }
 
-/** navbar **/
+/** div **/
 nav {
     margin: 0;
     display: flex;
@@ -58,7 +58,7 @@ nav>ul>li>input{
     border-color:green;
 }
 
-/** navbar **/
+
 
 
 

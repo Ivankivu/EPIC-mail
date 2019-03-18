@@ -7,7 +7,7 @@
     <title>EPIC Mail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <script src="js/main.js"></script>
+   
 </head>
 
 <body>
@@ -22,20 +22,20 @@
             <img src="img/Email.png" width="400" height="400">
         </div>
         <div class="box">
-            <form action="index.html" id="form">
+            <form action="index.html" name="login">
                 <heading>
                     <h2>Sign in to EPIC Mail</h2>
                 </heading>
                 <div>
-                    <input type="email" placeholder="Email: e.g example@mail.com" required>
+                    <input type="email" name="email" placeholder="Email: e.g example@mail.com" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password: e.g ********" required>
+                    <input type="password" name="pass" placeholder="Password: e.g ********" required>
                 </div>
-                <input type="submit" value="Sign in">
+                <input type="submit" onclick="check(this.form)" value="Login">
                 <div></div>
                 <p> <a href="reset.html">Forgot password</a></p>
-                <input type="button" value="Sign Up">
+                <input type="button" value="Sign Up" onclick="window.location('signup.html');">
             </form>
         </div>
 
@@ -43,7 +43,7 @@
     <footer>
             <h3>EPIC Mail &copy; 2019</h3>
         </footer>
-
+        <script src="js/main.js"></script>
 </body>
 
 </html>
