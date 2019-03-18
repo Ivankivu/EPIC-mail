@@ -1,0 +1,217 @@
+body {
+    overflow: hidden;
+    margin: 0;
+
+    background-image: url(/UI/img/email-laptop-computer-marketing-ss-1920.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container,.container2,.container3 {
+    display: flex;
+    background-size: 100%;
+    height: 100%;
+    padding: 16px;
+
+}
+
+/** div **/
+nav {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 100px;
+    background-color: rgba(0, 0, 255, 0.363);
+}
+
+nav>h1 {
+    flex: 2;
+    color:black;
+}
+
+nav>ul {
+    flex: 1;
+}
+
+nav>ul>li {
+    margin: 0;
+    padding: 0;
+    float: right;
+    list-style-type: none;
+    width: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav>ul>li>a {
+    color: cyan;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav>ul>li>input{
+    color:white;
+    margin-right:20px;
+    width:100%;
+    height:35px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: green;
+    border-color:green;
+}
+
+/** signin page **/
+
+.box {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+}
+
+.box>form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 34px;
+    align-items: center;
+    background-color:rgba(127,255,212, 0.8);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box>form>div {
+    display: inline-flex;
+    width: 100%;
+    padding: 5px;
+}
+
+.box>form>div>input {
+    display: inline-flex;
+    width: 100%;
+    padding: 5px;
+    width:100%;
+    height:35px;
+    border-radius: 5px;
+    border-style: solid;
+    
+}
+.box>form>div>input[type="email"]:hover,
+input[type="password"]:hover{
+    border-color: blue;
+}
+
+.box>form>p {
+    text-align: right;
+}
+
+.box>form>input {
+    width: 100%;
+    padding: 5px;
+    width:100%;
+    height:35px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+
+.box>form>div>select.b {
+    margin-left: 10px;
+}
+
+
+/** sign in **/
+.container3 > .box2{
+    margin:20px;
+}
+
+.box2 {
+    width: 100%;
+    height: 100%;
+}
+
+.box2>form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+    background-color:rgba(127,255,212, 0.8);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.container3>.box2>form>div {
+    display: inline-flex;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+
+.box2>form>div {
+    display: inline-flex;
+    width: 80%;
+    padding: 5px;
+}
+.container3>.box2>form>div>input {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.container3>.box2>form>input {
+    width: 80%;
+    margin-bottom:8px;
+    padding: 10px;
+}
+.box2>form>div>input:hover {
+    border-color:blue;
+}
+
+.box2>form>div>input {
+    display: inline-flex;
+    width: 100%;
+    padding: 5px;
+    width:100%;
+    height:20px;
+    border-radius: 5px;
+    border-style: solid;
+}
+.box2>form>div>input[type="submit"]:hover,input[type="submit"]:hover{
+    background-color: green;
+    border-color:green;
+}
+
+
+.box2>form>input {
+    width: 80%;
+    padding: 5px;
+    height:40px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.box2>form>div>#button {
+    text-align: center;
+    margin: 0 auto;
+    align-self: center;
+    align-items: center
+}
+
+
+.box2>form>div>select.b {
+    margin-left: 10px;
+}
+
+
+footer {
+    /**background-color: rgb(243, 222, 194);**/
+    padding: 1px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.363);
+    color:black;
+}
