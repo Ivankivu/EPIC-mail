@@ -1,0 +1,130 @@
+.container4{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+    background-size: 100%;
+    height: 100%;
+    padding: 16px;
+
+}
+div>ul {
+    flex: 1;
+    margin-bottom:10px;
+}
+
+div>ul>li {
+    padding: 0;
+    float: left;
+    margin-left:20px;
+    list-style-type: none;
+    width: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div>ul>li>a {
+    color: cyan;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+div>ul>li>input{
+    margin-right:20px;
+    width:100%;
+    height:35px;
+}
+
+
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 15%;
+  height: 300px;
+  
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 10px;
+  border: 0px solid #ccc;
+  width: 85%;
+  border-left: none;
+  height: 100%;
+  /* background-color: rgb(212, 194, 170); */
+}
+
+/*.. table **/
+
+#Inbox table, #readmail table ,#Sent table,#Drafts table,#Junk table,#Trash table, #Groups table {
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 0 solid #ddd;
+    background-color: lightsteelblue
+  }
+
+  #add-group table{
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 0 solid #ddd;
+    background-color: lightsteelblue
+  }
+  th{
+      background-color: grey;
+  }
+  
+th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  #Inbox table tr td,#Sent table tr td,#Drafts table tr td,#Junk table tr td,#Trash table tr td, #Groups table tr td{
+border-bottom: 1px solid
+  }
+
+  #Inbox table tr:hover,#Sent table tr:hover,#Drafts table tr:hover,#Junk table tr:hover,#Trash table tr:hover, #Groups table tr:hover{
+    cursor: pointer;
+    background-color: #f2f2f2;
+  }
+
+  textarea{
+      width:100%;
+      height:100px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #f2f2f2
+  } */
+
