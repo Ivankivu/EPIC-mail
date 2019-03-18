@@ -110,11 +110,13 @@ th, td {
     text-align: left;
     padding: 16px;
   }
-  #Inbox table tr td,#Sent table tr td,#Drafts table tr td,#Junk table tr td,#Trash table tr td, #Groups table tr td{
+
+  #Inbox table tr td,#Sent table tr td,#Drafts table tr td,#Junk table tr td,#Trash table tr td{
 border-bottom: 1px solid
   }
 
-  #Inbox table tr:hover,#Sent table tr:hover,#Drafts table tr:hover,#Junk table tr:hover,#Trash table tr:hover, #Groups table tr:hover{
+  #Inbox table tr:hover,#Sent table tr:hover,#Drafts table tr:hover,#Junk table tr:hover,#Trash table tr:hover{
+
     cursor: pointer;
     background-color: #f2f2f2;
   }
