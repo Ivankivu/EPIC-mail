@@ -85,7 +85,9 @@ div>ul>li>input{
 
 /*.. table **/
 
+
 #Inbox table, #Compose table, #readmail table ,#Sent table,#Drafts table,#Junk table,#Trash table, #Groups table {
+
     border-radius: 5px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -93,6 +95,7 @@ div>ul>li>input{
     border: 0 solid #ddd;
     background-color: lightsteelblue
   }
+
  
   #Compose table tr th form input{
     width:100%;
@@ -110,6 +113,7 @@ div>ul>li>input{
     color:blue;
     padding:10px
   }
+
 
   #add-group table{
     border-radius: 5px;
