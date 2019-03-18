@@ -11,39 +11,38 @@
 
 </head>
 
-<body> <nav>
+<body>
+    <nav>
         <h1>EPIC Mail</h1>
-        <ul>
-            <li><input type="submit" value="Sign Up"></li>
-        </ul>
+
     </nav>
 
     <div class="container3">
-       
+
         <div class="box2">
-            <form action="index.html" id="form">
+            <form id="form" name="login">
                 <heading>
-                        <h1>EPIC Mail</h1>
-                    <h3>Sign in to EPIC Mail</h3>
+                    <h2>Sign in to EPIC Mail</h2>
                 </heading>
                 <div>
-                    <input type="email" placeholder="Email: e.g example@mail.com" required>
+                    <input type="email" id="email" name="email" placeholder="Email: e.g example@mail.com" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password: e.g ********" required>
+                    <input type="password" id="password" name="pass" placeholder="Password: e.g ********" required>
                 </div>
-                <input type="submit" value="Sign in">
 
+                <input type="submit" value="Login">
+                <div></div>
                 <p> <a href="reset.html">Forgot password</a></p>
+                <input type="submit" value="Sign Up" onclick="window.location.href='signup.html';return false;">
 
-                <input type="submit" value="Sign Up">
-            </form>
         </div>
-        
+
     </div>
     <footer>
-            <h3>EPIC Mail &copy; 2019</h3>
-        </footer>
+        <h3>EPIC Mail &copy; 2019</h3>
+    </footer>
+    <script src="js/login.js"></script>
 
 
 </body>

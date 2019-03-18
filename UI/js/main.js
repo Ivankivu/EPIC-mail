@@ -29,8 +29,6 @@ function email(evt, emailTab) {
  });
   
 
-
-// check message nox if empty before sending
   function required()
   {
   var empt = document.form.textarea.value;
@@ -47,17 +45,3 @@ function email(evt, emailTab) {
   }
 
 
-
-//login form
-function check(form){
-    if (form.email.value == "admin@andela.ug" && form.pass.value == "andela256"){
-        window.open('admin.html')
-    }
-    if (form.email.value == 'ivan@gmail.com' && form.pass.value == 'uganda'){
-        window.open('user.html')
-    }
-    else{
-        alert("Error Password or Username");
-        window.location.href('index.html');
-    }
-}
