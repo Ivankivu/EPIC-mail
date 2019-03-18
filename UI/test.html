@@ -20,20 +20,18 @@
                 
             <li><input type="button" value="Logout" onclick="window.location.href='signin.html';return false;"></li>
             <li><input type="button" value="Contacts" onclick="window.location.href='contacts.html';return false;"></li>
-            <li><input type="button" value="Mail" onclick="window.location.href='user.html';return false;"></li>
+            <li><input type="button" value="Mail" onclick="window.location.href='admin.html';return false;"></li>
         </ul>
     </nav>
 
     <div class="container4">
         <div class="tab">
-
-            <button class="tablinks" onclick="email(event, 'Compose')">Compose mail +</button>
-
+            <button class="tablinks" onclick="email(event, 'Inbox')">Compose mail +</button>
             <button class="tablinks" onclick="email(event, 'Inbox')">Inbox(3)</button>
-            <button class="tablinks" >Sent</button>
-            <button class="tablinks" >Draft(1)</button>
-            <button class="tablinks" >Junk(3)</button>
-            <button class="tablinks" >Trash(3)</button>
+            <button class="tablinks" onclick="email(event, 'Sent')">Sent</button>
+            <button class="tablinks" onclick="email(event, 'Drafts')">Draft(1)</button>
+            <button class="tablinks" onclick="email(event, 'Junk')">Junk(3)</button>
+            <button class="tablinks" onclick="email(event, 'Trash')">Trash(3)</button>
             <button class="tablinks" ></button>
             <button class="tablinks" ></button>
             <button class="tablinks" ></button>
@@ -64,35 +62,6 @@
             </table>
 
         </div>
-
-
-        <div id="Compose" class="tabcontent">
-            <table id="inboxtable">
-                <tr>
-                    <th>
-                        <form name="form" onsubmit="required()">
-                        <br>From: <input type="text">
-                        <br>To: <input type="text">
-                        <br>Subject: <input type="text">
-                    </th><th>
-                            <li><input type="button" value="Save as draft" onclick="alert('Saved as Draft');return false;"></li>
-                            <li><input type="button" value="Delete" onclick="alert('Message Deleted!');return false;"></li>
-                    </th></tr>
-                    <tbody>
-                <tr>
-                    <td>
-                        <textarea name="textarea" height="4" width="10"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="alert('Message sent!');return false;"></form>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
 
         <div id="readmail" class="tabcontent" style="display:block">
             <table id="inboxtable">
@@ -125,7 +94,10 @@
                     </td>
                 </tr>
                 </tbody>
+
+
             </table>
+
         </div>
 
         <div id="Sent" class="tabcontent">
