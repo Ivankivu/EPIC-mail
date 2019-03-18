@@ -1,7 +1,9 @@
 body {
     overflow: hidden;
     margin: 0;
+
     background-image: url(/UI/img/email-laptop-computer-marketing-ss-1920.jpg);
+
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -57,12 +59,6 @@ nav>ul>li>input{
     background-color: green;
     border-color:green;
 }
-
-
-
-
-
-
 
 /** signin page **/
 
@@ -166,6 +162,7 @@ input[type="password"]:hover{
     width: 100%;
     padding: 10px;
 }
+
 .container3>.box2>form>input {
     width: 80%;
     margin-bottom:8px;
