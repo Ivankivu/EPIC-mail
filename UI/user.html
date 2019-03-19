@@ -30,10 +30,10 @@
 
             <button class="tablinks" onclick="email(event, 'Compose')">Compose mail +</button>
             <button class="tablinks" onclick="email(event, 'Inbox')">Inbox(3)</button>
-            <button class="tablinks">Sent</button>
-            <button class="tablinks">Draft(1)</button>
-            <button class="tablinks">Junk(3)</button>
-            <button class="tablinks">Trash(3)</button>
+            <button class="tablinks" onclick="email(event, 'Sent')">Sent</button>
+            <button class="tablinks" onclick="email(event, 'Drafts')">Draft(1)</button>
+            <button class="tablinks" onclick="email(event, 'Junk')">Junk(3)</button>
+            <button class="tablinks" onclick="email(event, 'Trash')">Trash(3)</button>
             <button class="tablinks"></button>
             <button class="tablinks"></button>
             <button class="tablinks"></button>
@@ -111,8 +111,23 @@
                     </th>
                 </tr>
                 <tbody>
+                        <tr>
+                                <td>
+                                    <p>
+                                        Dear Ivan,<br><br>
+        
+                                        We would to inform you that after a selection review for all candidates,
+                                        we are sorry to inform you that you have not been selected.
+                                        We do encourage you to encourage you to use our homestudy material as you prepare
+                                        and review where you went wrong.<br><br>Thank you<br>Andela Uganda
+                                    </p>
+                                </td>
+                            </tr>
+                    <tr onclick = "rowHide()">
+                        <td><b>Expand..</b></td>
+                    </tr>
 
-                    <tr>
+                    <tr id="rowHidden">
                         <td>
                             <p>
                                 Dear Ivan,<br><br>
@@ -124,24 +139,13 @@
                             </p>
                         </td>
                     </tr>
+                   
                     <tr>
                         <td>
                             <form name="form" onsubmit="required()">
                                 <label>[+] Reply </label> &nbsp;
                                 <textarea name="textarea" height="4" width="10"></textarea>
                                 &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="myFunc()"></form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>
-                                Dear Ivan,<br><br>
-
-                                We would to inform you that after a selection review for all candidates,
-                                we are sorry to inform you that you have not been selected.
-                                We do encourage you to encourage you to use our homestudy material as you prepare
-                                and review where you went wrong.<br><br>Thank you<br>Andela Uganda
-                            </p>
                         </td>
                     </tr>
 
@@ -237,5 +241,16 @@
         </div>
     </div>
     <script src="js/main.js"></script>
-    </body> </html>
+
+    <script>
+    function rowHide(){
+        var x = document.getElementById("rowHidden");
+        if (x.style.display === "none"){
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
+    < </body> </html>
 
