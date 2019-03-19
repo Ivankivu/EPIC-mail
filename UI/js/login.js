@@ -1,11 +1,7 @@
-
-
-
-
 function authenticate(email, password){
 
     if(email==="admin@andela.ug" && password ==="andela256"){
-       
+
         window.location.href = "./admin.html";
     }
     if (form.email.value == 'ivan@gmail.com' && form.pass.value == 'uganda'){
@@ -14,9 +10,11 @@ function authenticate(email, password){
         }
 
        else{
+
            const errormessage = document.getElementById("error");
            errormessage.innerText = "Login Failed!"
        }
+
   }
   
   const loginForm = document.getElementById("form");
