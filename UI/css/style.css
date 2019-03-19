@@ -136,7 +136,7 @@ th, td {
 border-bottom: 1px solid
   }
 
-  #Inbox table tr:hover,#Sent table tr:hover,#Drafts table tr:hover,#Junk table tr:hover,#Trash table tr:hover{
+  #readmail table tr:hover,#Inbox table tr:hover,#Sent table tr:hover,#Drafts table tr:hover,#Junk table tr:hover,#Trash table tr:hover{
 
     cursor: pointer;
     background-color: #f2f2f2;
