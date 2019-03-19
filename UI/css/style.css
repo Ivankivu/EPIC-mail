@@ -114,6 +114,10 @@ div>ul>li>input{
     padding:10px
   }
 
+  .container4 .box2 form #error{
+    color:red;
+  }
+
 
   #add-group table{
     border-radius: 5px;
