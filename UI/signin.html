@@ -7,47 +7,37 @@
     <title>EPIC Mail-Sign in</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <script src="js/main.js"></script>
 
 </head>
 
 <body>
-    <nav>
-        <h1>EPIC Mail</h1>
-
-    </nav>
-
+    <div class="topnav">
+        <h1><a href="signin.html">EPIC Mail</a></h1>
+    </div>
     <div class="container3">
-
         <div class="box2">
             <form id="form" name="login">
                 <heading>
                     <h2>Sign in to EPIC Mail</h2>
                 </heading>
                 <div>
-                    <input type="email" id="email" name="email" placeholder="Email: e.g example@mail.com" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div>
-                    <input type="password" id="password" name="pass" placeholder="Password: e.g ********" required>
+                    <input type="password" id="password" name="pass" placeholder="Password" required>
                 </div>
-
-                <input type="submit" value="Login">
-
+                <input type="submit" value="Login" class="login">
                 <span id="error" style="color:red;"></span>
-
                 <div></div>
                 <p> <a href="reset.html">Forgot password</a></p>
-                <input type="submit" value="Sign Up" onclick="window.location.href='signup.html';return false;">
-
+                <input type="submit" value="Sign Up" onclick="window.location.href='signup.html';return false;" class="signup">
         </div>
-
     </div>
     <footer>
         <h3>EPIC Mail &copy; 2019</h3>
     </footer>
+    <script src="js/main.js"></script>
     <script src="js/login.js"></script>
-
-
 </body>
 
 </html>
