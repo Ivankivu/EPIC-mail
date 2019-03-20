@@ -8,17 +8,14 @@
   padding: 16px;
 
 }
-
 @media only screen and (min-width: 701px) {
   .mobile {
     display: none;
   }
 }
-
 * {
   box-sizing: border-box
 }
-
 /* Style the tab */
 .tab {
   float: left;
@@ -27,9 +24,7 @@
   width: 15%;
   height: 480px;
   border-radius: 5px;
-
 }
-
 /* Style the buttons that are used to open the tab content */
 .tab button {
   display: block;
@@ -43,17 +38,14 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 }
-
 /* Create an active/current "tab button" class */
 .tab button.active {
   background-color: #ccc;
 }
-
 /* Style the tab content */
 .tabcontent {
   float: left;
@@ -64,7 +56,6 @@
   border-left: none;
   height: 100%;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -74,7 +65,6 @@
     font-size: 18px;
   }
 }
-
 @media only screen and (max-width: 700px) {
   .backimage {
     overflow: hidden;
@@ -83,13 +73,11 @@
     background-repeat: no-repeat;
     background-position: unset;
 }
-
   .topnav h1,
   .topnav div,
   .tab {
     display: none;
   }
-
   .tab a {
     display: block;
     background-color: inherit;
@@ -101,15 +89,12 @@
     cursor: pointer;
     transition: 0.3s;
   }
-
   .tab a:hover {
     background-color: #ddd;
   }
-
   .tab a.active {
     background-color: #ccc;
   }
-
   .container4 .tab {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
@@ -117,34 +102,28 @@
     height: 300px;
     overflow: hidden;
   }
-
   .mobile div {
     display: flex;
   }
-
   .mobile div span {
     flex: 1;
     font-size:25px;
     cursor: pointer;
     margin: 20px 20px;
   }
-
   .mobile div h1 {
     flex: 1;
     color: #f2f2f2;
     margin:10px;
     font-size: 35px;
   }
-
   .mobile div h1 a{
     color: #f2f2f2;
     text-decoration: none;
   }
-
   .mobile .a {
     display: none;
   }
-
   .mobile h1 {
     color: #f2f2f2;
     text-align: left;
@@ -153,7 +132,6 @@
     font-size: 17px;
     text-align: center;
   }
-
   .container4 .tabcontent {
     flex-direction: row;
     padding: 0px 10px;
@@ -163,7 +141,6 @@
     height: 100%;
   }
 }
-
 /*.. table **/
 #Inbox table,
 #Compose table,
@@ -181,17 +158,14 @@
   border: 0 solid #ddd;
   background-color: lightsteelblue
 }
-
 #Compose table tr th form input {
   width: 100%;
 }
-
 #Compose table tr th li {
   display: block;
   list-style: none;
   margin-bottom: 10px;
 }
-
 #Compose table tr th li input[type="button"] {
 
   width: 40%;
@@ -199,7 +173,6 @@
   color: blue;
   padding: 10px
 }
-
 .container4 .box2 form #error {
   color: red;
 }
@@ -211,7 +184,6 @@
   border: 0 solid #ddd;
   background-color: lightsteelblue
 }
-
 .container4 #add-group table {
   border-radius: 5px;
   border-collapse: collapse;
@@ -220,7 +192,6 @@
   border: 0 solid #ddd;
   background-color: lightsteelblue
 }
-
 .container4 #Groups select{
   width: 100%;
   margin-bottom: 5px;
@@ -287,7 +258,6 @@ td {
 #Trash table tr td {
   border-bottom: 1px solid
 }
-
 #Inbox table tr:hover,
 #Sent table tr:hover,
 #Drafts table tr:hover,
@@ -296,7 +266,6 @@ td {
   cursor: pointer;
   background-color: #f2f2f2;
 }
-
 #Compose input[type="text"],input[type="email"] {
   width: 100%;
   margin-bottom: 5px;
@@ -313,11 +282,9 @@ td {
   border-radius: 5px;
   border-style: 0 solid;
 }
-
 #Compose label {
   margin-bottom: 10px;
 }
-
 textarea {
   margin: 10px 0 10px 0;
   width: 100%;
@@ -325,7 +292,6 @@ textarea {
   border-radius: 5px;
   border-style: 0 solid;
 }
-
 .topnav h1{
   flex: 1;
   margin: 10px;
@@ -337,14 +303,12 @@ textarea {
   color: whitesmoke;
   text-decoration: none;
 }
-
 .topnav {
   display: flex;
   flex-direction: row;
   background-color: rgba(51, 51, 51, 0.431);
   overflow: hidden;
 }
-
 .topnav div a {
   flex: 2;
   float: right;
@@ -354,17 +318,14 @@ textarea {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav div a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .topnav div a.active {
   background-color: #4CAF50;
   color: white;
 }
-
 /* The sidebar */
 .sidenav {
   height: 100%;
@@ -378,7 +339,6 @@ textarea {
   padding-top: 60px;
   transition: 0.5s;
 }
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -387,12 +347,10 @@ textarea {
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
   cursor: pointer;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -400,17 +358,14 @@ textarea {
   font-size: 36px;
   margin-left: 50px;
 }
-
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
-
 #readmail #inboxtable tbody #tap {
   cursor: pointer;
   background-color: gray;
 }
-
 #readmail {
   overflow-y: auto;
 }

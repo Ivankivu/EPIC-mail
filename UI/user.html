@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-
 </head>
 
 <body onload="email(event, 'Inbox'), rowHide()" class="backimage">
@@ -17,7 +16,6 @@
         <h1><a href="user.html">EPIC Mail</a></h1>
         <div>
             <a class="a" href='signin.html'>Logout</a>
-            <a class="a" href='contacts.html'>Contacts</a>
             <a class="a" href='user.html'>Home</a>
         </div>
     </div>
@@ -27,7 +25,6 @@
             <h1><a href="user.html">EPIC Mail</a></h1>
         </div>
         <a class="a" href='signin.html'>Logout</a>
-        <a class="a" href='contacts.html'>Contacts</a>
         <a class="a" href='user.html'>Home</a>
     </div>
     <!-- </nav> -->
@@ -41,7 +38,6 @@
             <a class="tablinks" onclick="email(event, 'Spam')">Spam(3)</a>
             <hr>
             <a href='user.html'>Home</a>
-            <a href='contacts.html'>Contacts</a>
             <a href='signin.html'>Logout</a>
         </div>
         <div class="tab">
@@ -81,7 +77,6 @@
                 <tr>
                     <th>
                         <form name="form">
-
                             <br><label>From:</label> <input type="email" required>
                             <br><label>To:</label> <input type="email" required>
                             <br><label>Subject:</label><input type="text" required>
@@ -144,11 +139,9 @@
                                 &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="myFunc()"></form>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
-
         <div id="Sent" class="tabcontent">
             <table>
                 <tr>
