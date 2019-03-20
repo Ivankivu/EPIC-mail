@@ -72,7 +72,6 @@ nav>ul>li>input {
 }
 
 /** signin page **/
-
 .box {
     display: inline-block;
     width: 50%;
@@ -107,7 +106,6 @@ nav>ul>li>input {
     height: 35px;
     border-radius: 5px;
     border-style: solid;
-
 }
 
 .box>form>div>input[type="email"]:hover,
@@ -260,7 +258,6 @@ footer {
 }
 
 /*media queries*/
-
 @media only screen and (max-width: 800px) {
 
     .box2>form {
