@@ -80,7 +80,7 @@
             <table id="composetable">
                 <tr>
                     <th>
-                        <form name="form" onsubmit="required();alert('Message sent!');return false;">
+                        <form name="form">
 
                             <br><label>From:</label> <input type="email" required>
                             <br><label>To:</label> <input type="email" required>
@@ -96,8 +96,8 @@
                     <tr>
                         <td>
                             &nbsp;<input type="submit" value="Send" id="sendinmail">
-                            <input type="submit" value="Save as draft" onclick="alert('Saved as Draft');return false;">
-                            <input type="submit" value="Delete" onclick="alert('Message Deleted!');return false;">
+                            <input type="submit" value="Save as draft">
+                            <input type="submit" value="Delete">
                             </form>
                         </td>
                     </tr>
@@ -138,7 +138,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <form name="form" onsubmit="required()">
+                            <form name="form">
                                 <label>[+] Reply </label> &nbsp;
                                 <textarea name="textarea" height="4" width="10"></textarea>
                                 &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="myFunc()"></form>
@@ -253,13 +253,7 @@
         }
     </script>
     <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
+       
     </script>
 </body>
 

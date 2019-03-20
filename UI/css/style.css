@@ -203,8 +203,7 @@
 .container4 .box2 form #error {
   color: red;
 }
-
-.container #add-group table {
+.container4 #Groups table {
   border-radius: 5px;
   border-collapse: collapse;
   border-spacing: 0;
@@ -212,7 +211,17 @@
   border: 0 solid #ddd;
   background-color: lightsteelblue
 }
-.container4 #add-group select{
+
+.container4 #add-group table {
+  border-radius: 5px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 0 solid #ddd;
+  background-color: lightsteelblue
+}
+
+.container4 #Groups select{
   width: 100%;
   margin-bottom: 5px;
   padding: 3px;
@@ -222,6 +231,16 @@
 }
 .container4 #add-group input{
   width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+  height: 30px;
+  border:none;
+  border-radius: 5px;
+  border-style: 0 solid;
+}
+.container4 #Groups input{
+  width: 100%;
   margin-bottom: 5px;
   padding: 3px;
   height: 30px;
@@ -229,6 +248,17 @@
   border-style: 0 solid;
 }
 .container4 #add-group input[type="submit"]{
+  width: 10%;
+  margin-bottom: 5px;
+  padding: 3px;
+  color:white;
+  height: 40px;
+  border-radius: 5px;
+  border-style: 0 solid;
+  background-color: blue;
+  border:none;
+}
+.container4 #Groups input[type="submit"]{
   width: 10%;
   margin-bottom: 5px;
   padding: 3px;

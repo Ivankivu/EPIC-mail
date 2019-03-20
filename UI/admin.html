@@ -12,13 +12,30 @@
 
 <body onload="email(event, 'Groups')">
     <div class="topnav">
-        <h1><a href="user.html">EPIC Mail</a></h1>
+        <h1><a href="admin.html">EPIC Mail</a></h1>
         <div>
             <a class="a" href='signin.html'>Logout</a>
             <a class="a" href='admin.html'>Home</a>
         </div>
     </div>
+    <div class="mobile">
+        <div>
+            <span onclick="openNav()">&#9776;</span>
+            <h1><a href="admin.html">EPIC Mail</a></h1>
+        </div>
+        <a class="a" href='signin.html'>Logout</a>
+        <a class="a" href='admin.html'>Home</a>
+    </div>
+    <!-- </nav> -->
     <div class="container4">
+        <div id="mySidenav" class="sidenav mobile">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="tablinks" onclick="email(event, 'Groups')">Groups</a>
+            <a class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</a>
+            <hr>
+            <a href='admin.html'>Home</a>
+            <a href='signin.html'>Logout</a>
+        </div>
         <div class="tab">
             <button class="tablinks" onclick="email(event, 'Groups')">Groups</button>
             <button class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</button>
@@ -33,7 +50,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <form name="form" onsubmit="required()">
+                            <form name="form">
                                 <label>Group name:</label>
                                 <input type="text">
                         </td>
@@ -47,7 +64,7 @@
                                 <option>Ahmed kyakulubya</option>
                                 <option>Monday kyeyune</option>
                                 <option>Nambi Rita</option>
-                            </select>&nbsp;<input type="submit" value="Add" id="sendinmail" onclick="myFunc()">
+                            </select>&nbsp;<input type="submit" value="Add" id="addgroup">
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +73,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td><input type="submit" value="Save Group" id="sendinmail" onclick="myFunc()"></form>
+                        <td><input type="submit" value="SaveGroup" id="newgroup"></form>
                         </td>
                     </tr>
                 </tfoot>
@@ -72,7 +89,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <form name="form" onsubmit="required()">
+                            <form name="form" id="formAd">
                                 <label>Active Groups: </label> &nbsp;
                                 <select name="textarea" height="4" width="10">
                                     <option>Select</option>
@@ -88,14 +105,14 @@
                                     <option>Ahmed kyakulubya</option>
                                     <option>Monday kyeyune</option>
                                     <option>Nambi Rita</option>
-                                </select>&nbsp;<input type="submit" value="Add" id="addgroup" onclick="myFunc()">
+                                </select>&nbsp;<input type="submit" value="Add" id="selectgroup">
                                 <br><br><br><textarea></textarea>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td><input type="submit" value="Save Group" id="savegroup" onclick="myFunc()"></form>
+                        <td><input type="submit" value="SaveGroup" id="savegroup"></form>
                         </td>
                     </tr>
                 </tfoot>

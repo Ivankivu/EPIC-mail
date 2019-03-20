@@ -36,4 +36,19 @@ function email(evt, emailTab) {
   }
   }
 
-  
+  document.querySelector("#formAd").addEventListener("submit", function(e){
+    if(!isValid){
+        e.preventDefault();
+        alert("Group added!");
+        return false;
+    }else{
+      alert("failed!!")
+    }
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

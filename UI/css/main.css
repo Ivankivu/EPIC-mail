@@ -10,7 +10,7 @@ body {
 .backimage {
     overflow: hidden;
     margin: 0;
-    background-image: url("./img/footage.png");
+    background-image: url("../img/footage.png");
     background-repeat: no-repeat;
     background-position: center;
 }
