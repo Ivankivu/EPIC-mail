@@ -5,11 +5,9 @@ function authenticate(email, password){
         window.location.href = "./admin.html";
     }
     if (form.email.value == 'ivan@gmail.com' && form.pass.value == 'uganda'){
-            //redirect to user
+            
         window.location.href = "./user.html";
-        }
-
-       else{
+        } else{
 
            const errormessage = document.getElementById("error");
            errormessage.innerText = "Login Failed!"
@@ -26,5 +24,6 @@ function authenticate(email, password){
     authenticate(email, password)
 
   })
-  
+
+
  

@@ -8,255 +8,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-
 </head>
 
-<body onload="email(event, 'Inbox')">
-
-
+<body onload="email(event, 'Groups')">
     <nav>
         <h1>EPIC Mail</h1>
         <ul>
-                
             <li><input type="button" value="Logout" onclick="window.location.href='signin.html';return false;"></li>
             <li><input type="button" value="Contacts" onclick="window.location.href='contacts.html';return false;"></li>
             <li><input type="button" value="Mail" onclick="window.location.href='admin.html';return false;"></li>
         </ul>
     </nav>
-
     <div class="container4">
         <div class="tab">
-            <button class="tablinks" onclick="email(event, 'Inbox')">Compose mail +</button>
-            <button class="tablinks" onclick="email(event, 'Inbox')">Inbox(3)</button>
-            <button class="tablinks" onclick="email(event, 'Sent')">Sent</button>
-            <button class="tablinks" onclick="email(event, 'Drafts')">Draft(1)</button>
-            <button class="tablinks" onclick="email(event, 'Junk')">Junk(3)</button>
-            <button class="tablinks" onclick="email(event, 'Trash')">Trash(3)</button>
-            <button class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</button>
             <button class="tablinks" onclick="email(event, 'Groups')">Groups</button>
-        </div>
-
-        <div id="Inbox" class="tabcontent">
-            <table id="inboxtable">
-                <tr>
-                    <th>Subject</th>
-                    <th>From</th>
-                    <th>Date</th>
-                </tr>
-                <tr onclick="email(event, 'readmail')">
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 07:00</td>
-                </tr>
-                <tr onclick="email(event, 'readmail')">
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 16:00</td>
-                </tr>
-                <tr onclick="email(event, 'readmail')">
-                    <td>Cohort 11..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-11-09 07:00</td>
-                </tr>
-            </table>
-
-        </div>
-
-        <div id="readmail" class="tabcontent" style="display:block">
-            <table id="inboxtable">
-                <tr>
-                    <th><b>Cohort 10..</b>
-                        <br>From: <b>care@andela.ug</b>
-                        <br>To: <b>ivankivu@gmail.com</b>
-                        <br>Date: <b>2009-10-14</b>
-                    </th></tr>
-                    <tbody>
-                <tr>
-                    <td>
-                        <p>
-                            Dear Ivan,<br><br>
-
-                            We would to inform you that after a selection review for all candidates,
-                            we are sorry to inform you that you have not been selected.
-                            We do encourage you to encourage you to use our homestudy material as you prepare
-                            and review where you went wrong.<br><br>Thank you<br>Andela Uganda
-
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form name="form" onsubmit="required()">
-                            <label>[+] Reply </label> &nbsp;
-                            <textarea name="textarea" height="4" width="10"></textarea>
-                            &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="myFunc()"></form>
-                    </td>
-                </tr>
-                </tbody>
-
-
-            </table>
-
-        </div>
-
-        <div id="Sent" class="tabcontent">
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>To</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 07:00</td>
-                </tr>
-                <tr>
-                    <td>Cohort 11..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-11-09 07:00</td>
-                </tr>
-            </table>
-
-        </div>
-        <div id="Drafts" class="tabcontent">
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>To</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 07:00</td>
-                </tr>
-            </table>
-
-        </div>
-        <div id="Junk" class="tabcontent">
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>From</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 07:00</td>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 16:00</td>
-                </tr>
-                <tr>
-                    <td>Cohort 11..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-11-09 07:00</td>
-                </tr>
-            </table>
-
-        </div>
-
-        <div id="Trash" class="tabcontent">
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>From</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 07:00</td>
-                </tr>
-                <tr>
-                    <td>Cohort 10..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-10-14 16:00</td>
-                </tr>
-                <tr>
-                    <td>Cohort 11..</td>
-                    <td>care@andela.ug</td>
-                    <td>2009-11-09 07:00</td>
-                </tr>
-            </table>
-
+            <button class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</button>
         </div>
         <div id="add-group" class="tabcontent">
             <table>
-                    <tr><th><h2>add new Group</h2>
+                <tr>
+                    <th>
+                        <h2>add new Group</h2>
                     </th>
                 </tr>
-                    <tbody>
-                     <tr>
-                         <td><form name="form" onsubmit="required()">
-                             <label>Group name:</label>
-                             <input type="text">
-                         </td>
-                     </tr>
-                     
-                     <tr><td>
-                         <label>Add contact: </label> &nbsp;
-                         <select name="textarea" height="4" width="10">
-                             <option>Select</option>
-                             <option>Ivan kivumbi</option>
-                             <option>Ahmed kyakulubya</option>
-                             <option>Monday kyeyune</option>
-                             <option>Nambi Rita</option>
-                         </select>&nbsp;<input type="submit" value="Add" id="sendinmail" onclick="myFunc()">
-                        </td></tr>
-                         <tr><td><textarea></textarea></td></tr>
-                    </tbody>
-                    <tfoot>
-                            <tr><td><input type="submit" value="Save Group" id="sendinmail" onclick="myFunc()"></form></td></tr>
-                    </tfoot>
-                    
-
-
+                <tbody>
+                    <tr>
+                        <td>
+                            <form name="form" onsubmit="required()">
+                                <label>Group name:</label>
+                                <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Add contact: </label> &nbsp;
+                            <select name="textarea" height="4" width="10">
+                                <option>Select</option>
+                                <option>Ivan kivumbi</option>
+                                <option>Ahmed kyakulubya</option>
+                                <option>Monday kyeyune</option>
+                                <option>Nambi Rita</option>
+                            </select>&nbsp;<input type="submit" value="Add" id="sendinmail" onclick="myFunc()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><textarea></textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="submit" value="Save Group" id="sendinmail" onclick="myFunc()"></form>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <div id="Groups" class="tabcontent">
             <table>
-
-
-                    <tr><th><h2>Add Users to groups</h2>
+                <tr>
+                    <th>
+                        <h2>Add Users to groups</h2>
                     </th>
                 </tr>
-                    <tbody>
-                     <tr>
-                         <td><form name="form" onsubmit="required()">
-                               
-                                        <label>Active Groups: </label> &nbsp;
-                                        <select name="textarea" height="4" width="10">
-                                            <option>Select</option>
-                                            <option>Cohort 1</option>
-                                            <option>Cohort 2</option>
-                                            <option>Cohort 3</option>
-                                            <option>Cohort 4</option>
-                                        </select>&nbsp;
-                                            <label>Add contact: </label> &nbsp;
-                                            <select name="textarea" height="4" width="10">
-                                                <option>Select</option>
-                                                <option>Ivan kivumbi</option>
-                                                <option>Ahmed kyakulubya</option>
-                                                <option>Monday kyeyune</option>
-                                                <option>Nambi Rita</option>
-                                            </select>&nbsp;<input type="submit" value="Add" id="sendinmail" onclick="myFunc()">
-                                           <br><br><br><textarea></textarea></td></tr>
-                                       </tbody>
-                               <tfoot>
-                                       <tr><td><input type="submit" value="Save Group" id="sendinmail" onclick="myFunc()"></form></td></tr>
-                               </tfoot>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form name="form" onsubmit="required()">
+
+                                <label>Active Groups: </label> &nbsp;
+                                <select name="textarea" height="4" width="10">
+                                    <option>Select</option>
+                                    <option>Cohort 1</option>
+                                    <option>Cohort 2</option>
+                                    <option>Cohort 3</option>
+                                    <option>Cohort 4</option>
+                                </select>&nbsp;
+                                <label>Add contact: </label> &nbsp;
+                                <select name="textarea" height="4" width="10">
+                                    <option>Select</option>
+                                    <option>Ivan kivumbi</option>
+                                    <option>Ahmed kyakulubya</option>
+                                    <option>Monday kyeyune</option>
+                                    <option>Nambi Rita</option>
+                                </select>&nbsp;<input type="submit" value="Add" id="sendinmail" onclick="myFunc()">
+                                <br><br><br><textarea></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="submit" value="Save Group" id="sendinmail" onclick="myFunc()"></form>
+                        </td>
+                    </tr>
+                </tfoot>
 
             </table>
 
         </div>
     </div>
-
-
     <script src="js/main.js"></script>
 </body>
 
