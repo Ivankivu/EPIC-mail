@@ -1,4 +1,4 @@
-body{
+body {
     overflow: hidden;
     margin: 0;
 
@@ -9,7 +9,7 @@ body{
 .backimage {
     overflow: hidden;
     margin: 0;
-    background-image: url("./img/footage.png");
+    background-image: url("../img/footage.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -21,7 +21,6 @@ body{
     height: 100%;
     padding: 16px;
 }
-
 /** div **/
 nav {
     margin: 0;
@@ -30,18 +29,15 @@ nav {
     padding: 0 100px;
     background-color: rgba(0, 0, 255, 0.363);
 }
-
 nav>h1 {
     flex: 2;
     color: black;
 }
-
 nav>ul {
     flex: 1;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
 }
-
 nav>ul>li {
     margin: 0;
     padding: 0;
@@ -50,14 +46,12 @@ nav>ul>li {
     width: 80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 nav>ul>li>a {
     color: #666;
     color: cyan;
     text-decoration: none;
     font-size: 25px;
 }
-
 nav>ul>li>input {
     color: white;
     margin-right: 20px;
@@ -68,16 +62,13 @@ nav>ul>li>input {
     background-color: green;
     border-color: green;
 }
-
 /** signin page **/
-
 .box {
     display: inline-block;
     width: 50%;
     height: 100%;
     padding: 15px;
 }
-
 .box>form {
     display: flex;
     flex-direction: column;
@@ -90,13 +81,11 @@ nav>ul>li>input {
     border-radius: 20px;
     text-align: center;
 }
-
 .box>form>div {
     display: inline-flex;
     width: 100%;
     padding: 5px;
 }
-
 .box>form>div>input {
     display: inline-flex;
     width: 100%;
@@ -105,18 +94,14 @@ nav>ul>li>input {
     height: 35px;
     border-radius: 5px;
     border-style: solid;
-
 }
-
 .box>form>div>input[type="email"]:hover,
 input[type="password"]:hover {
     border-color: blue;
 }
-
 .box>form>p {
     text-align: right;
 }
-
 .box>form>input {
     width: 100%;
     padding: 5px;
@@ -125,23 +110,17 @@ input[type="password"]:hover {
     border-radius: 5px;
     border-style: solid;
 }
-
-
 .box>form>div>select.b {
     margin-left: 10px;
 }
-
-
 /** sign in **/
 .container3>.box2 {
     margin: 20px;
 }
-
 .box2 {
     width: 100%;
     height: 100%;
 }
-
 .box2>form {
     display: flex;
     flex-direction: column;
@@ -153,46 +132,39 @@ input[type="password"]:hover {
     border-radius: 20px;
     text-align: center;
 }
-
 .container3>.box2>form>div {
     display: inline-flex;
     width: 80%;
     padding: 5px;
     margin-bottom: 5px;
 }
-
-
 .box2>form>div {
     display: inline-flex;
     width: 80%;
     padding: 5px;
 }
-
 .container3>.box2>form>div>input {
     display: inline-flex;
     width: 100%;
     padding: 10px;
 }
-
 .container3>.box2>form>input {
     width: 80%;
     margin-bottom: 8px;
     padding: 10px;
 }
 .container3>.box2>form>.login {
-    background-color:green;
-    border:none;
+    background-color: green;
+    border: none;
 }
 .container3>.box2>form>.signup {
-    background-color:blue;
-    border:none;
+    background-color: blue;
+    border: none;
     margin-bottom: 20px;
 }
-
 .box2>form>div>input:hover {
     border-color: blue;
 }
-
 .box2>form>div>input {
     display: inline-flex;
     width: 100%;
@@ -201,7 +173,6 @@ input[type="password"]:hover {
     border-radius: 5px;
     border-style: solid;
 }
-
 .box2>form>input[type="submit"] {
     background-color: green;
     border-color: green;
@@ -217,10 +188,9 @@ input[type="password"]:hover {
     padding: 5px;
     height: 50px;
     border-radius: 5px;
-    background-color:blue;
-    border:none;
+    background-color: blue;
+    border: none;
 }
-
 .box2>form>input {
     width: 80%;
     padding: 5px;
@@ -228,37 +198,27 @@ input[type="password"]:hover {
     border-radius: 5px;
     border-style: solid;
 }
-
 .box2 form input:focus {
     outline: none;
 }
-
 .container3 .box2 form input:focus {
     outline: none;
 }
-
-
 .box2>form>div>#button {
     text-align: center;
     margin: 0 auto;
     align-self: center;
     align-items: center
 }
-
-
 .box2>form>div>select.b {
     margin-left: 10px;
 }
-
-
 footer {
     padding: 1px 20px;
     text-align: center;
     color: black;
 }
-
 /*media queries*/
-
 @media only screen and (max-width: 800px) {
 
     .box2>form {
@@ -273,20 +233,17 @@ footer {
         text-align: center;
     }
 }
-
 @media only screen and (max-width: 700px) {
     .box img {
         display: none;
     }
-
     #box {
         display: none;
     }
-    .container .box{
-        margin:0 auto;
-        width:70%;
+    .container .box {
+        margin: 0 auto;
+        width: 70%;
     }
-
     .box>form {
         display: flex;
         flex-direction: column;
@@ -297,7 +254,6 @@ footer {
         border-radius: 20px;
         text-align: center;
     }
-
     .box2>form {
         display: flex;
         flex-direction: column;
@@ -310,28 +266,24 @@ footer {
         text-align: center;
     }
 }
-
-
-.topnav h1{
+.topnav h1 {
     flex: 1;
     margin: 10px;
     color: whitesmoke;
-  }
-  .topnav h1 a {
+}
+.topnav h1 a {
     flex: 1;
     margin: 10px;
     color: whitesmoke;
     text-decoration: none;
-  }
-  
-  .topnav {
+}
+.topnav {
     display: flex;
     flex-direction: row;
     background-color: rgba(51, 51, 51, 0.431);
     overflow: hidden;
-  }
-  
-  .topnav div a {
+}
+.topnav div a {
     flex: 2;
     float: right;
     color: #f2f2f2;
@@ -339,14 +291,12 @@ footer {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-  .topnav div a:hover {
+}
+.topnav div a:hover {
     background-color: #ddd;
     color: black;
-  }
-  
-  .topnav div a.active {
+}
+.topnav div a.active {
     background-color: #4CAF50;
     color: white;
-  }
+}

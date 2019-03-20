@@ -1,20 +1,13 @@
 function email(evt, emailTab) {
-    // Declare all variables
     var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  
-    // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(emailTab).style.display = "block";
     evt.currentTarget.className += " active";
   }
@@ -28,7 +21,6 @@ function email(evt, emailTab) {
     });
  });
   
-
   function required()
   {
   var empt = document.form.textarea.value;
@@ -44,4 +36,27 @@ function email(evt, emailTab) {
   }
   }
 
-  
+  document.querySelector("#formAd").addEventListener("submit", function(e){
+    if(!isValid){
+        e.preventDefault();
+        alert("Group added!");
+        return false;
+    }else{
+      alert("failed!!")
+    }
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+function rowHide() {
+  var x = document.getElementById("rowHidden");
+  if (x.style.display === "none") {
+      x.style.display = "block";
+  } else {
+      x.style.display = "none";
+  }
+}
