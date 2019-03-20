@@ -11,35 +11,47 @@
 
 </head>
 
-<body onload="email(event, 'Inbox')">
-
-
-    <nav>
-        <h1>EPIC Mail</h1>
-        <ul>
-
-
-            <li><input type="button" value="Logout" onclick="window.location.href='signin.html';return false;"></li>
-            <li><input type="button" value="Contacts" onclick="window.location.href='contacts.html';return false;"></li>
-            <li><input type="button" value="Mail" onclick="window.location.href='user.html';return false;"></li>
-        </ul>
-    </nav>
-
+<body onload="email(event, 'Inbox'), rowHide()" class="backimage">
+    <!-- <nav> -->
+    <div class="topnav">
+        <h1><a href="user.html">EPIC Mail</a></h1>
+        <div>
+            <a class="a" href='signin.html'>Logout</a>
+            <a class="a" href='contacts.html'>Contacts</a>
+            <a class="a" href='user.html'>Home</a>
+        </div>
+    </div>
+    <div class="mobile">
+        <div>
+            <span onclick="openNav()">&#9776;</span>
+            <h1><a href="user.html">EPIC Mail</a></h1>
+        </div>
+        <a class="a" href='signin.html'>Logout</a>
+        <a class="a" href='contacts.html'>Contacts</a>
+        <a class="a" href='user.html'>Home</a>
+    </div>
+    <!-- </nav> -->
     <div class="container4">
+        <div id="mySidenav" class="sidenav mobile">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="tablinks" onclick="email(event, 'Compose')">Compose mail +</a>
+            <a class="tablinks" onclick="email(event, 'Inbox')">Inbox(3)</a>
+            <a class="tablinks" onclick="email(event, 'Sent')">Sent</a>
+            <a class="tablinks" onclick="email(event, 'Drafts')">Draft(1)</a>
+            <a class="tablinks" onclick="email(event, 'Spam')">Spam(3)</a>
+            <hr>
+            <a href='user.html'>Home</a>
+            <a href='contacts.html'>Contacts</a>
+            <a href='signin.html'>Logout</a>
+        </div>
         <div class="tab">
-
             <button class="tablinks" onclick="email(event, 'Compose')">Compose mail +</button>
             <button class="tablinks" onclick="email(event, 'Inbox')">Inbox(3)</button>
             <button class="tablinks" onclick="email(event, 'Sent')">Sent</button>
             <button class="tablinks" onclick="email(event, 'Drafts')">Draft(1)</button>
-            <button class="tablinks" onclick="email(event, 'Junk')">Junk(3)</button>
+            <button class="tablinks" onclick="email(event, 'Spam')">Spam(3)</button>
             <button class="tablinks" onclick="email(event, 'Trash')">Trash(3)</button>
-            <button class="tablinks"></button>
-            <button class="tablinks"></button>
-            <button class="tablinks"></button>
-
         </div>
-
         <div id="Inbox" class="tabcontent">
             <table id="inboxtable">
                 <tr>
@@ -63,83 +75,67 @@
                     <td>2009-11-09 07:00</td>
                 </tr>
             </table>
-
         </div>
-
-
         <div id="Compose" class="tabcontent">
-            <table id="inboxtable">
+            <table id="composetable">
                 <tr>
                     <th>
-                        <form name="form" onsubmit="required()">
+                        <form name="form" onsubmit="required();alert('Message sent!');return false;">
 
-                            <br>From: <input type="text">
-                            <br>To: <input type="text">
-                            <br>Subject: <input type="text">
-                    </th>
-                    <th>
-                        <li><input type="button" value="Save as draft" onclick="alert('Saved as Draft');return false;"></li>
-                        <li><input type="button" value="Delete" onclick="alert('Message Deleted!');return false;"></li>
+                            <br><label>From:</label> <input type="email" required>
+                            <br><label>To:</label> <input type="email" required>
+                            <br><label>Subject:</label><input type="text" required>
                     </th>
                 </tr>
                 <tbody>
                     <tr>
                         <td>
-                            <textarea name="textarea" height="4" width="10"></textarea>
+                            <textarea name="textarea" height="600" required></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            &nbsp;<input type="submit" value="Send" id="sendinmail" onclick="alert('Message sent!');return false;"></form>
+                            &nbsp;<input type="submit" value="Send" id="sendinmail">
+                            <input type="submit" value="Save as draft" onclick="alert('Saved as Draft');return false;">
+                            <input type="submit" value="Delete" onclick="alert('Message Deleted!');return false;">
+                            </form>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
-
-
         <div id="readmail" class="tabcontent">
-
             <table id="inboxtable">
                 <tr>
-                    <th><b>Cohort 10..</b>
+                    <th>
                         <br>From: <b>care@andela.ug</b>
                         <br>To: <b>ivankivu@gmail.com</b>
                         <br>Date: <b>2009-10-14</b>
-
                     </th>
                 </tr>
-                <tbody>
-                        <tr>
-                                <td>
-                                    <p>
-                                        Dear Ivan,<br><br>
-        
-                                        We would to inform you that after a selection review for all candidates,
-                                        we are sorry to inform you that you have not been selected.
-                                        We do encourage you to encourage you to use our homestudy material as you prepare
-                                        and review where you went wrong.<br><br>Thank you<br>Andela Uganda
-                                    </p>
-                                </td>
-                            </tr>
-                    <tr onclick = "rowHide()">
+                <tbody style="overflow:scroll;">
+                    <tr>
+                        <td>
+                            <p>
+                                Dear Andela,<br><br>
+                                It is okay. I will try again.
+                                <br><br>Thank you<br>Andela Uganda
+                            </p>
+                        </td>
+                    </tr>
+                    <tr onclick="rowHide()" id="tap">
                         <td><b>Expand..</b></td>
                     </tr>
-
                     <tr id="rowHidden">
                         <td>
                             <p>
                                 Dear Ivan,<br><br>
-
                                 We would to inform you that after a selection review for all candidates,
                                 we are sorry to inform you that you have not been selected.
-                                We do encourage you to encourage you to use our homestudy material as you prepare
-                                and review where you went wrong.<br><br>Thank you<br>Andela Uganda
+                                <br><br>Thank you<br>Andela Uganda
                             </p>
                         </td>
                     </tr>
-                   
                     <tr>
                         <td>
                             <form name="form" onsubmit="required()">
@@ -159,19 +155,23 @@
                     <th>Subject</th>
                     <th>To</th>
                     <th>Date</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>Cohort 10..</td>
                     <td>care@andela.ug</td>
                     <td>2009-10-14 07:00</td>
+                    <td><img src="/UI/img/shrink.png" title="Retract">
+                        &nbsp; <img src="/UI/img/delete-button.png" title="Delete"></td>
                 </tr>
                 <tr>
                     <td>Cohort 11..</td>
                     <td>care@andela.ug</td>
                     <td>2009-11-09 07:00</td>
+                    <td><img src="/UI/img/shrink.png" title="Retract">
+                        &nbsp; <img src="/UI/img/delete-button.png" title="Delete"></td>
                 </tr>
             </table>
-
         </div>
         <div id="Drafts" class="tabcontent">
             <table>
@@ -179,16 +179,19 @@
                     <th>Subject</th>
                     <th>To</th>
                     <th>Date</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>Cohort 10..</td>
                     <td>care@andela.ug</td>
                     <td>2009-10-14 07:00</td>
+                    <td><img src="/UI/img/edit.png" title="edit" onclick="email(event, 'Compose')">&nbsp;
+                        <img src="/UI/img/shrink.png" title="retract">
+                        &nbsp; <img src="/UI/img/delete-button.png" title="delete"></td>
                 </tr>
             </table>
-
         </div>
-        <div id="Junk" class="tabcontent">
+        <div id="Spam" class="tabcontent">
             <table>
                 <tr>
                     <th>Subject</th>
@@ -211,9 +214,7 @@
                     <td>2009-11-09 07:00</td>
                 </tr>
             </table>
-
         </div>
-
         <div id="Trash" class="tabcontent">
             <table>
                 <tr>
@@ -241,16 +242,25 @@
         </div>
     </div>
     <script src="js/main.js"></script>
-
     <script>
-    function rowHide(){
-        var x = document.getElementById("rowHidden");
-        if (x.style.display === "none"){
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        function rowHide() {
+            var x = document.getElementById("rowHidden");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-    }
     </script>
-    < </body> </html>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
 
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
