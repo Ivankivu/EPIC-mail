@@ -54,7 +54,11 @@ Then select develop branch
 
 ### Screen shots
 
-![alt text](https://ivankivu.github.io/EPIC-mail/UI/Screenshot-2019.png)
+![alt text](/UI/img/Screenshot-2019.png)
+![alt text](/UI/img/Screenshot6.png)
+![alt text](/UI/img/Screenshot2.png)
+![alt text](/UI/img/Screenshot3.png)
+![alt text](/UI/img/Screenshot4.png)
 
 ## Author
 
