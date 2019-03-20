@@ -11,14 +11,13 @@
 </head>
 
 <body onload="email(event, 'Groups')">
-    <nav>
-        <h1>EPIC Mail</h1>
-        <ul>
-            <li><input type="button" value="Logout" onclick="window.location.href='signin.html';return false;"></li>
-            <li><input type="button" value="Contacts" onclick="window.location.href='contacts.html';return false;"></li>
-            <li><input type="button" value="Mail" onclick="window.location.href='admin.html';return false;"></li>
-        </ul>
-    </nav>
+    <div class="topnav">
+        <h1><a href="user.html">EPIC Mail</a></h1>
+        <div>
+            <a class="a" href='signin.html'>Logout</a>
+            <a class="a" href='admin.html'>Home</a>
+        </div>
+    </div>
     <div class="container4">
         <div class="tab">
             <button class="tablinks" onclick="email(event, 'Groups')">Groups</button>
@@ -101,9 +100,7 @@
                         </td>
                     </tr>
                 </tfoot>
-
             </table>
-
         </div>
     </div>
     <script src="js/main.js"></script>

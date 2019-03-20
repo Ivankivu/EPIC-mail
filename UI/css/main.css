@@ -80,7 +80,7 @@ nav>ul>li>input {
 .box>form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin: 0 auto;
     padding: 34px;
@@ -178,6 +178,15 @@ input[type="password"]:hover {
     margin-bottom: 8px;
     padding: 10px;
 }
+.container3>.box2>form>.login {
+    background-color:green;
+    border:none;
+}
+.container3>.box2>form>.signup {
+    background-color:blue;
+    border:none;
+    margin-bottom: 20px;
+}
 
 .box2>form>div>input:hover {
     border-color: blue;
@@ -192,11 +201,24 @@ input[type="password"]:hover {
     border-style: solid;
 }
 
-.box2>form>div>input[type="submit"] {
+.box2>form>input[type="submit"] {
     background-color: green;
     border-color: green;
 }
-
+.box>form>.login {
+    padding: 5px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: green;
+    border-color: green;
+}
+.box>form>.signup {
+    padding: 5px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:blue;
+    border:none;
+}
 
 .box2>form>input {
     width: 80%;
@@ -251,7 +273,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     .box img {
         display: none;
     }
@@ -259,9 +281,9 @@ footer {
     #box {
         display: none;
     }
-    .container #box{
-        /* margin:0 auto; */
-        align-items: center;
+    .container .box{
+        margin:0 auto;
+        width:70%;
     }
 
     .box>form {
@@ -287,3 +309,43 @@ footer {
         text-align: center;
     }
 }
+
+
+.topnav h1{
+    flex: 1;
+    margin: 10px;
+    color: whitesmoke;
+  }
+  .topnav h1 a {
+    flex: 1;
+    margin: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(51, 51, 51, 0.431);
+    overflow: hidden;
+  }
+  
+  .topnav div a {
+    flex: 2;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav div a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav div a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
