@@ -21,8 +21,7 @@ class ViewUser(MethodView):
             "id": userid,
             "firstname": firstname,
             "lastname": lastname,
-            "email": email,
-            "is_admin": is_admin
+            "email": email
         }
         users.append(user_data)
         return jsonify({"message": "Account was created successfully!"}), 201
