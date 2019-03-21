@@ -2,7 +2,6 @@ from flask import Flask, jsonify, Request, request, json, Response
 from flask.views import MethodView
 from app import app
 from app.api.models.users import User, users, userid
-# from app.utils import Validator
 
 
 class ViewUser(MethodView):

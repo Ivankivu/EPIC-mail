@@ -32,9 +32,7 @@ class TestUser(unittest.TestCase):
                                   content_type='application/json',
                                   data=json.dumps(self.object.__dict__)
                                   )
-        # data = json.loads(result.data)
         self.assertTrue("Account was created successfully!", 201)
-        # self.assertEqual(result.status_code, 201)
 
     def test_getting_user_users(self):
         result = self.client.get('api/v1/users',
