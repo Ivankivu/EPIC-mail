@@ -1,6 +1,7 @@
 import unittest
 from flask import Flask, json
 from app import app
+from app.api import create_app
 from app.api.models.users import User, users, userid
 from app.api.views.viewusers import ViewUser
 from app.utils import Validator
