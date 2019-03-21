@@ -1,17 +1,16 @@
 import string
-from datetime import datetime
 from flask import Flask
 
 
 class Validator:
 
-    def auto_id(list):
-        
+    def auto_id(item_id, list):
         global id
-        if len(list) == 0:
-            id = len(list) + 1
+        if len(list) != 0:
+            last_item = (list)[-1]
+            id = last_item.get(item_id) + 1
         else:
-            id = id + 1
+            id = 1
         return id
 
     def is_empty(list):

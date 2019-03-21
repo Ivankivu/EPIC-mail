@@ -13,7 +13,7 @@ class Config(object):
 
 
 class TestingConfig(Config):
-    """Configurations for Testing, with a separate test database."""
+    """Configurations for Testing"""
     TESTING = True
     DEBUG = True
 
