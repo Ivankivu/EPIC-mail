@@ -52,14 +52,6 @@ Clone this Repository
 
 Then select develop branch
 
-### Screen shots
-
-![alt text](/UI/img/Screenshot-2019.png)
-![alt text](/UI/img/Screenshot6.png)
-![alt text](/UI/img/Screenshot2.png)
-![alt text](/UI/img/Screenshot3.png)
-![alt text](/UI/img/Screenshot4.png)
-
 ## Author
 
 Ivan Kivumbi
