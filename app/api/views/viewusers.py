@@ -69,3 +69,4 @@ class ViewMessage(MethodView):
     def all_messages():
         response = Message.all_messages()
         return jsonify(response)
+
