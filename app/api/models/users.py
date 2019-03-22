@@ -16,4 +16,3 @@ class User:
         self.lastname = lastname
         self.email = email
         self.password = password
-        self.is_admin = False

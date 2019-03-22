@@ -6,9 +6,11 @@ class Validator:
 
     def auto_id(item_id, list):
         global id
-        if len(list) != 0:
+        if len(list) == 0:
+            id = len(list)+1
+        if len(list) > 0:
             last_item = (list)[-1]
-            id = last_item.get(item_id) + 1
+            id = len(last_item) + 1
         else:
             id = 1
         return id
