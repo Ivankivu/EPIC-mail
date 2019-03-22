@@ -18,7 +18,7 @@ class ViewUser(MethodView):
         email = data["email"]
         password = data["password"]
         user_data = {
-            "id": userid,
+            "userid": userid,
             "firstname": firstname,
             "lastname": lastname,
             "email": email,

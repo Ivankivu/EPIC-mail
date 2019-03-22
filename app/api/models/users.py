@@ -9,7 +9,7 @@ userid = Validator.auto_id(dict, users)
 
 class User:
 
-    def __init__(self, *args):
+    def __init__(self, userid, firstname, lastname, email, password):
         super(User, self).__init__()
         self.userid = userid
         self.firstname = firstname
