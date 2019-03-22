@@ -26,16 +26,3 @@ class ViewUser(MethodView):
         }
         users.append(user_data)
         return jsonify({"message": "Account was created successfully!"}), 201
-
-    @app.route('/api/v1/auth/login', methods=['POST'])
-    def login():
-        info = request.get_json()
-        email = info.get('email', None)
-        password = info.get('password', None)
-        if len(users) == 0:
-            return jsonify({'message': 'No users found'})
-        for user in users:
-            if user["email"] != email and user["password"] != password:
-                return jsonify({'message': "login failed!!"}), 400
-            else:
-                return jsonify({'message': "logged in"}), 200
