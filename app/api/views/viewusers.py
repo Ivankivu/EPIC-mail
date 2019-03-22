@@ -42,29 +42,6 @@ class ViewUser(MethodView):
             else:
                 return jsonify({'message': "logged in"}), 200
 
-
-class ViewMessage(MethodView):
-
-    @app.route('/api/v1/messages', methods=['POST'])
-    def new_message():
-        items = request.get_json()
-
-        message = items.get("message")
-        status = items.get("status")
-
-        sent = {
-            "status": status,
-            "data": [{
-                "message_id": message_id,
-                "createdOn": createdOn,
-                "message": message,
-                "parentMessageId": parentMessageId
-            }]
-        }
-
-        result = Message.new_message(sent)
-        return jsonify(result)
-
     @app.route('/api/v1/messages', methods=['GET'])
     def all_messages():
         response = Message.all_messages()
