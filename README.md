@@ -53,6 +53,7 @@ password:`uganda`
 
 ### Installation
 
+
 Clone this Repository
 
 [clone this](https://github.com/Ivankivu/EPIC-mail.git)
@@ -60,6 +61,7 @@ Clone this Repository
 `$ cd EPIC-mail`
 
 Then select develop branch
+
 
 ## Author
 
