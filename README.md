@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+# Welcome to EPIC Mail
 
-You can use the [editor on GitHub](https://github.com/Ivankivu/EPIC-mail/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The internet is increasingly becoming an integral part of lives. Ever since the invention of
+[electronic mail](https://en.wikipedia.org/wiki/Email) by [Ray Tomlinson](https://en.wikipedia.org/wiki/Ray_Tomlinson), emails have grown to become the primary medium of
+exchanging information over the internet between two or more people, until the advent of Instant
+Messaging (IM) Apps.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+As EPIC Andelans who work towards advancing human potential and giving back to the society,
+we wish to empower others by building a web app that helps people exchange
+messages/information over the internet.
 
-### Markdown
+## Features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* As a User:
+    1. I should be able to signup for a new EPIC Mail account.
+    2. I should should be able to sign into my EPIC Mail account.
+    3. I should be able to reset my password
+    4. I should be able to send email to individuals or groups.
+    5. I should be able to view my inbox.
+    6. I should be able to read an email message and any resulting thread.
+    7. I should be able to view sent messages and retract a sent message.
 
-```markdown
-Syntax highlighted code block
+* As an Admin:
+    1. I should be able to create a group and add different users.
 
-# Header 1
-## Header 2
-### Header 3
+## Built-with
 
-- Bulleted
-- List
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Hypertext Markup Language for creating web pages and web applications.
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Cascading Style Sheets, a styling language used beautifying and adding style to an [HTML](https://en.wikipedia.org/wiki/HTML) page
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript) - a high level programming language thats used to apply dynamism to elements on a web page or web application.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+To get started in order to view the application, Follow this [Demo](https://ivankivu.github.io/EPIC-mail/UI/)
 
-[Link](url) and ![Image](src)
-```
+### Login as admin
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+email: `admin@andela.ug`
+password: `andela256`
 
-### Jekyll Themes
+### Login as user
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ivankivu/EPIC-mail/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+email:`ivan@gmail.com`
+password:`uganda`
 
-### Support or Contact
+### Installation
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Clone this Repository
+
+[clone this](https://github.com/Ivankivu/EPIC-mail.git)
+
+`$ cd EPIC-mail`
+
+Then select develop branch
+
+## Author
+
+Ivan Kivumbi
