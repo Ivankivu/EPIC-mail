@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EPIC Mail-Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+
+<body onload="email(event, 'Groups')">
+    <div class="topnav">
+        <h1><a href="admin.html">EPIC Mail</a></h1>
+        <div>
+            <a class="a" href='signin.html'>Logout</a>
+            <a class="a" href='admin.html'>Home</a>
+        </div>
+    </div>
+    <div class="mobile">
+        <div>
+            <span onclick="openNav()">&#9776;</span>
+            <h1><a href="admin.html">EPIC Mail</a></h1>
+        </div>
+        <a class="a" href='signin.html'>Logout</a>
+        <a class="a" href='admin.html'>Home</a>
+    </div>
+    <!-- </nav> -->
+    <div class="container4">
+        <div id="mySidenav" class="sidenav mobile">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="tablinks" onclick="email(event, 'Groups')">Groups</a>
+            <a class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</a>
+            <hr>
+            <a href='admin.html'>Home</a>
+            <a href='signin.html'>Logout</a>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="email(event, 'Groups')">Groups</button>
+            <button class="tablinks" onclick="email(event, 'add-group')">[+] Add Group</button>
+        </div>
+        <div id="add-group" class="tabcontent">
+            <table>
+                <tr>
+                    <th>
+                        <h2>add new Group</h2>
+                    </th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form name="form">
+                                <label>Group name:</label>
+                                <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Add contact: </label> &nbsp;
+                            <select name="textarea" height="4" width="10">
+                                <option>Select</option>
+                                <option>Ivan kivumbi</option>
+                                <option>Ahmed kyakulubya</option>
+                                <option>Monday kyeyune</option>
+                                <option>Nambi Rita</option>
+                            </select>&nbsp;<input type="submit" value="Add" id="addgroup">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><textarea></textarea></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="submit" value="SaveGroup" id="newgroup"></form>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="Groups" class="tabcontent">
+            <table>
+                <tr>
+                    <th>
+                        <h2>Add Users to groups</h2>
+                    </th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form name="form" id="formAd">
+                                <label>Active Groups: </label> &nbsp;
+                                <select name="textarea" height="4" width="10">
+                                    <option>Select</option>
+                                    <option>Cohort 1</option>
+                                    <option>Cohort 2</option>
+                                    <option>Cohort 3</option>
+                                    <option>Cohort 4</option>
+                                </select>&nbsp;
+                                <label>Add contact: </label> &nbsp;
+                                <select name="textarea" height="4" width="10">
+                                    <option>Select</option>
+                                    <option>Ivan kivumbi</option>
+                                    <option>Ahmed kyakulubya</option>
+                                    <option>Monday kyeyune</option>
+                                    <option>Nambi Rita</option>
+                                </select>&nbsp;<input type="submit" value="Add" id="selectgroup">
+                                <br><br><br><textarea></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="submit" value="SaveGroup" id="savegroup"></form>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
