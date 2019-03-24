@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EPIC Mail-Password reset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+
+<body>
+    <nav>
+        <h1>EPIC Mail</h1>
+        <ul>
+            <li><input type="submit" value="Signup"></li>
+            <li><input type="submit" value="Login"></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="box">
+            <img src="img/emaillock.png" width="500" height="400">
+            <div></div>
+        </div>
+        <div class="box">
+            <form action="index.html" id="form" onsubmit="required()">
+                <heading>
+                    <h2>Forgot your password?</h2>
+                    <p>Enter your email or username.
+                        We'll email instructions on how to reset your password.</p>
+                </heading>
+                <label style="float:left;">Email</label>
+                <div>
+                    <input type="email" name="email" required>
+                </div>
+                <input type="submit" value="Submit">
+                <div></div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h3>EPIC Mail &copy; 2019</h3>
+    </footer>
+    <script>
+        function required() {
+            var empt = form.email.value;
+            if (empt === "") {
+                alert("Message empty..");
+                return false;
+            } else {
+                alert('A link has been Sent to your email. Check for password recovery');
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
