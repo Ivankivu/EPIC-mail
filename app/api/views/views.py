@@ -115,3 +115,17 @@ class ViewMessage(MethodView):
         if ['status'] != 'unread':
             return jsonify({"error": "no mail by  user found!"})
         return jsonify(messages)
+
+    @app.route('/api/v1/messages/<int:id>', methods=['GET'])
+    def single_message(id):
+        if len(messages) == 0:
+            return jsonify({"message": "Inbox is empty!!"})
+        for message in messages:
+            if message["data"]["id"] == '':
+                response = {"error": "empty field"}
+                return response
+            if isinstance((message["data"]["id"] == 0), str):
+                response = {'message': 'ID must be of type integer'}
+                return response
+            if message["data"]["id"] == id:
+                return jsonify(message)
