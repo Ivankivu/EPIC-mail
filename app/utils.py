@@ -81,3 +81,4 @@ class Validator:
                 return jsonify({"error": 'empty list'})
             if not isalpha(item):
                 return jsonify({"error": 'invalid credentials'})
+

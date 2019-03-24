@@ -38,7 +38,7 @@ class TestUser(unittest.TestCase):
                                   data=json.dumps(self.object.__dict__)
                                   )
         self.assertIsNot(405, result.status_code,
-                         "Account was created successfully!")
+                         "Account was created successfully!")1
         self.assertTrue("Account was created successfully!", 201)
 
     def test_getting_user_users(self):

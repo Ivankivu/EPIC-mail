@@ -62,4 +62,6 @@ Clone this Repository
 
 Then select develop branch
 
+## Author
+
 Ivan Kivumbi
