@@ -70,12 +70,10 @@ class TestMessage(unittest.TestCase):
 
     def test_send_message(self):
         result = self.client.post('api/v1/messages',
-                                  content_type='application/json'
-                                  )
-        self.assertEqual(400, result.status_code,
-                         "message failed!")
+                                  json=self.message_data)
+        self.assertEqual(200, result.status_code,
+                         "message sent!")
         self.assertTrue("message sent!", 201)
-        self.assertEqual(200, result.status_code, json=self.message_data)
 
     def test_unread_messages(self):
         result = self.client.get('api/v1/messages/unread',
