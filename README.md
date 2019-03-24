@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+# Badges
 
-You can use the [editor on GitHub](https://github.com/Ivankivu/EPIC-mail/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+[![Build Status](https://travis-ci.org/Ivankivu/EPIC-mail.svg?branch=api-user-get-all-sent-emails-164727371)](https://travis-ci.org/Ivankivu/EPIC-mail)[![Maintainability](https://api.codeclimate.com/v1/badges/079ceee6c85bf2c40de9/maintainability)](https://codeclimate.com/github/Ivankivu/EPIC-mail/maintainability) [![Coverage Status](https://coveralls.io/repos/github/Ivankivu/EPIC-mail/badge.svg?branch=api-user-get-all-sent-emails-164727371)](https://coveralls.io/github/Ivankivu/EPIC-mail?branch=api-user-get-all-sent-emails-164727371)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome to EPIC Mail
 
-### Markdown
+The internet is increasingly becoming an integral part of lives. Ever since the invention of
+[electronic mail](https://en.wikipedia.org/wiki/Email) by [Ray Tomlinson](https://en.wikipedia.org/wiki/Ray_Tomlinson), emails have grown to become the primary medium of
+exchanging information over the internet between two or more people, until the advent of Instant
+Messaging (IM) Apps.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+As EPIC Andelans who work towards advancing human potential and giving back to the society,
+we wish to empower others by building a web app that helps people exchange
+messages/information over the internet.
 
-```markdown
-Syntax highlighted code block
+## UI Features
 
-# Header 1
-## Header 2
-### Header 3
+ |`/user`| `/admin`|
+ |---|---|
+ |- signup for a new EPIC Mail account| - create groups|
+ |- sign into my EPIC Mail account| - add individuals to groups|
+ |- reset password||
+ |- view inbox||
+ |- reade email message||
+ |- view sent messages and retract a sent message||
+ |- send email to individuals or groups||
 
-- Bulleted
-- List
+ ## login details
 
-1. Numbered
-2. List
+|user account|Admin account|
+|:---:|:---:|
+|email `ivan@gmail.com`||
+|password `brenda`||
 
-**Bold** and _Italic_ and `Code` text
+## Built-with
 
-[Link](url) and ![Image](src)
-```
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Hypertext Markup Language for creating web pages and web applications.
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Cascading Style Sheets, a styling language used beautifying and adding style to an [HTML](https://en.wikipedia.org/wiki/HTML) page
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript) - a high level programming language thats used to apply dynamism to elements on a web page or web application.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+To get started in order to view the application, Follow this [Demo](https://ivankivu.github.io/EPIC-mail/UI/)
 
-### Jekyll Themes
+### Login as admin
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ivankivu/EPIC-mail/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+email: `admin@andela.ug`
+password: `andela256`
 
-### Support or Contact
+### Login as user
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+email:`ivan@gmail.com`
+password:`uganda`
+
+### Installation
+
+Clone this Repository
+
+[clone this](https://github.com/Ivankivu/EPIC-mail.git)
+
+`$ cd EPIC-mail`
+
+Then select develop branch
+
+Ivan Kivumbi
