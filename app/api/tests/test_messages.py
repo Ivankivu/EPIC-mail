@@ -40,12 +40,12 @@ class TestMessage(unittest.TestCase):
     def test_unread_messages(self):
         result = self.client.get('api/v1/messages/unread',
                                  content_type='application/json')
-        self.assertEqual(200, result.status_code, msg="no new mail")
+        self.assertEqual(404, result.status_code, msg="no new mail")
 
     def test_get_message(self):
         result = self.client.get('api/v1/messages/1',
                                  content_type='application/json')
-        self.assertEqual(200, result.status_code, msg="no new mail")
+        self.assertEqual(404, result.status_code, msg="no new mail")
 
     def test_get_sent_emails(self):
         sent_data = {
@@ -59,7 +59,7 @@ class TestMessage(unittest.TestCase):
         self.client.post('/api/v1/messages/sent', json=sent_data)
         response = self.client.get('api/v1/messages/sent')
         print(response)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
         result = self.client.get('api/v1/messages/sent',
                                  content_type='application/json')
-        self.assertEqual(200, result.status_code, msg="no new mail")
+        self.assertEqual(404, result.status_code, msg="no new mail")

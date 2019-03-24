@@ -103,7 +103,8 @@ class ViewMessage(MethodView):
             }
         }
         if senderId == "":
-            return jsonify({"error": "senderID can't be an empty field!!"})
+            return jsonify({"error": "senderID can't be an empty field!!"}),
+            404
         else:
             messages.append(message_data)
         return jsonify(message_data)
@@ -111,29 +112,26 @@ class ViewMessage(MethodView):
     @app.route('/api/v1/messages/unread', methods=['GET'])
     def unread_message():
         if len(messages) == 0:
-            return jsonify({"error": "no new mail."})
+            return jsonify({"error": "no new mail."}), 404
         if ['status'] != 'unread':
-            return jsonify({"error": "no mail by  user found!"})
+            return jsonify({"error": "no mail by  user found!"}), 404
         return jsonify(messages)
 
     @app.route('/api/v1/messages/<int:id>', methods=['GET'])
     def single_message(id):
         if len(messages) == 0:
-            return jsonify({"message": "Inbox is empty!!"})
+            return jsonify({"message": "Inbox is empty!!"}), 404
         for message in messages:
-            if message["data"]["id"] == '':
-                response = {"error": "empty field"}
-                return response
-            if isinstance((message["data"]["id"] == 0), str):
-                response = {'message': 'ID must be of type integer'}
-                return response
-            if message["data"]["id"] == id:
+            response = (message["data"]["id"] == id)
+            if response:
                 return jsonify(message)
+            if not isinstance(id, int):
+                return jsonify({"error": "invalid"}), 400
 
     @app.route('/api/v1/messages/sent', methods=['GET'])
     def sent_message():
         if len(messages) == 0:
-            return jsonify({"error": "no messages found!!"})
+            return jsonify({"error": "no messages found!!"}), 404
         if ['status'] == 'sent' and ["userid"] == userid:
-            return jsonify({"error": "no messages by  user found!!"})
+            return jsonify({"error": "no messages by  user found!!"}), 404
         return jsonify(messages)
