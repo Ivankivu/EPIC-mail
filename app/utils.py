@@ -1,6 +1,8 @@
 import string
 import re
 from flask import Flask, jsonify
+from app import app
+from validate_email import validate_email
 
 
 class Validator:
@@ -17,29 +19,21 @@ class Validator:
         if len(list) == 0:
             return jsonify({"error": 'empty list'})
 
-    def validate_name(firstname, lastname):
-        if firstname == "" or lastname == "":
-            return jsonify({"error": "ffirstname is empty!!"})
-
-        if firstname == " " and lastname == " ":
+    def validate_string(item1, item2):
+        if item1 == "" or item2 == "":
+            return jsonify({"error": "value is empty!!"})
+        if item1 == " " and item2 == " ":
             return jsonify({"error": "Name cannot be spaces"})
-
-        if not isinstance(firstname, str) or not isinstance(lastname, str):
+        if not isinstance(item1, str) or not isinstance(item2, str):
             return jsonify({"error": "Name must be a string"})
-
-        if firstname.startswith(string.digits):
+        if item1.startswith(string.digits) or item2.startswith(string.digits):
             return jsonify({"error": "Name cannot start with a number"})
-        return firstname or lastname
 
     def check_validation(email):
-        for i in user:
-            input = request.get_json
-            message = i.strip() + ' is required'
-            if not input[i]:
-                return {'field': i, 'message': message}
-            elif i.strip() == 'email' and not bool(match(r"^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", input[x])):
-                response = ('email is invalid')
-                return ({'field': i, 'message': response})
-            elif i.strip() == 'password' and len(input[i].strip()) < 5:
-                message = 'password should be atleast five characters'
-                return message
+        is_valid = validate_email(email)
+        if not is_valid:
+            return jsonify({"error": "invalid email!!"}), 400
+
+    def check_string(*args):
+        if type(*args) != str:
+            return jsonify({"error": "invalid value!"}), 400
