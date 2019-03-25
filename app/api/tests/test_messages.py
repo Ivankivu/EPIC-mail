@@ -4,7 +4,6 @@ from flask import Flask, json
 from app import app
 from app.api import create_app
 from app.api.models.models import User, users, userid, Message, messages
-from app.api.models.models import parentMessageId
 from app.api.views.views import ViewUser
 from app.utils import Validator
 
@@ -33,7 +32,7 @@ class TestMessage(unittest.TestCase):
     def test_send_message(self):
         result = self.client.post('api/v1/messages',
                                   json=self.message_data)
-        self.assertEqual(500, result.status_code,
+        self.assertEqual(400, result.status_code,
                          "message failed!")
         self.assertTrue("message sent!", 201)
 
@@ -43,8 +42,20 @@ class TestMessage(unittest.TestCase):
         self.assertEqual(404, result.status_code, msg="no new mail")
 
     def test_get_message(self):
+        message_data = {
+                    "data": {
+                        "createdOn": "2019-03-25 11:28:31.298930",
+                        "id": 1,
+                        "message": "hi, am okay! How are you doing??",
+                        "receiverId": 3,
+                        "senderId": 1,
+                        "status": "sent",
+                        "subject": "hello 1"
+                    },
+                    "status": 201
+                }
         result = self.client.get('api/v1/messages/1',
-                                 content_type='application/json')
+                                 json=message_data)
         self.assertEqual(404, result.status_code, msg="no new mail")
 
     def test_get_sent_emails(self):

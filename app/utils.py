@@ -1,23 +1,9 @@
 import string
-import re
 from flask import Flask, jsonify
-from app import app
 from validate_email import validate_email
 
 
 class Validator:
-
-    def auto_id(list):
-        global id
-        if len(list) == 0:
-            id = len(list)+1
-        else:
-            id = list[-1]+1
-        return id
-
-    def is_empty(list):
-        if len(list) == 0:
-            return jsonify({"error": 'empty list'})
 
     def validate_string(item1, item2):
         if item1 == "" or item2 == "":
@@ -34,6 +20,32 @@ class Validator:
         if not is_valid:
             return jsonify({"error": "invalid email!!"}), 400
 
-    def check_string(*args):
-        if type(*args) != str:
+    def check_value(item1, item2, item3):
+        if isinstance(item1, str):
+            return jsonify({"error": "ID must be of type integer"}), 400
+        if isinstance(item2, int) or isinstance(item3, int):
+            return jsonify({"error": "content should be a string"}), 400
+        if (type(item2) != str or (type(item2) != str)):
             return jsonify({"error": "invalid value!"}), 400
+        if not item2 or not item3:
+            return jsonify({"error": "invalid value!"}), 400
+        if (item2 == " ") or (item3 == " "):
+            return jsonify({"error": "invalid space!"}), 400
+        if not item1:
+            return jsonify({"error": "invalid value!"}), 400
+
+    def validate_login(item1, item2, item3):
+        if isinstance(item1, int) or isinstance(item1, int):
+            return jsonify({"error": "invalid name"}), 400
+        if (type(item1) != str or (type(item2) != str)):
+            return jsonify({"error": "invalid name!"}), 400
+        if not item1 or not item2:
+            return jsonify({"error": "invalid name!"}), 400
+        if (item1 == " ") or (item2 == " ") or (item3 == " "):
+            return jsonify({"error": "invalid space!"}), 400
+        if isinstance(item3, int) < 10000000:
+            return jsonify({"error": "Minimum length 8 characters"}), 400
+        if len(item3) < 8:
+            return jsonify({"error": "Invalid password!!"}), 400
+        if not (item3):
+            return jsonify({"error": "password field empty!!"}), 400

@@ -4,7 +4,6 @@ from flask import Flask, json
 from app import app
 from app.api import create_app
 from app.api.models.models import User, users, userid, Message, messages
-from app.api.models.models import parentMessageId
 from app.api.views.views import ViewUser
 from app.utils import Validator
 

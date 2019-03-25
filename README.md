@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Ivankivu/EPIC-mail.svg?branch=user-delete-email-inbox-164727466)](https://travis-ci.org/Ivankivu/EPIC-mail)
 [![Maintainability](https://api.codeclimate.com/v1/badges/079ceee6c85bf2c40de9/maintainability)](https://codeclimate.com/github/Ivankivu/EPIC-mail/maintainability) [![Coverage Status](https://coveralls.io/repos/github/Ivankivu/EPIC-mail/badge.svg?branch=api-user-get-all-sent-emails-164727371)](https://coveralls.io/github/Ivankivu/EPIC-mail?branch=api-user-get-all-sent-emails-164727371)
+[![codecov](https://codecov.io/gh/Ivankivu/EPIC-mail/branch/api-user-delete-email/graph/badge.svg)](https://codecov.io/gh/Ivankivu/EPIC-mail)
 
 ## Welcome to EPIC Mail
 

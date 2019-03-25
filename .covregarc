@@ -10,14 +10,16 @@ omit =
     lib/
     share/
     include/
+    */env/*
+    */__init__/*
     env/
     env*
     */env/*
     */env
     venv/
-    app/__init__.py
-    app/api/__init__.py
-    app/api/models/__init__.py
-    app/api/tests/__init__.py
-    app/api/views/__init__.py
-    app/utils.py
+    */app/__init__.py/*
+    */app/api/__init__.py/*
+    */app/api/models/__init__.py/*
+    */app/api/tests/__init__.py/*
+    */app/api/views/__init__.py/*
+    */app/utils.py/*

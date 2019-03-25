@@ -15,7 +15,7 @@ class ViewUser(MethodView):
 
     @app.route("/api/v1/users", methods=["GET"])
     def all():
-        if len(users) == 0:
+        if not users:
             return jsonify({"error": "no contacts found!!"})
         return jsonify(users)
 
@@ -32,13 +32,16 @@ class ViewUser(MethodView):
             "lastname": lastname,
             "email": email
         }
+        for user in users:
+            if user["email"] == email:
+                return jsonify({'error': 'email already exists!'})
         is_valid = validate_email(email)
         if not is_valid:
             return jsonify({"error": "invalid email!!"}), 400
-        check_name = Validator.validate_string(firstname, lastname)
+        check_name = Validator.validate_login(firstname, lastname, password)
         if check_name:
             return check_name
-        users.update(user_data)
+        users.append(user_data)
         return jsonify({"message": "Account was created successfully!"}), 201
 
     @app.route('/api/v1/auth/login', methods=['POST'])
@@ -49,13 +52,13 @@ class ViewUser(MethodView):
         is_valid = validate_email(email)
         if not is_valid:
             return jsonify({"error": "invalid email!!"}), 400
-        if len(users) == 0:
+        if not users:
             return jsonify({'message': 'No users found'})
         if not email and not password:
             return jsonify({"message": "enter your credentials"}), 401
         if len(password) < 8:
             return jsonify({"error": "invalid password length!!"}), 400
-        if len(password) == 0:
+        if not password:
             return jsonify({"error": "password field empty!!"}), 400
         else:
             return jsonify({'message': "logged in"}), 200
@@ -73,6 +76,9 @@ class ViewMessage(MethodView):
             subject = info.get("subject")
             message = info.get("message")
             status = "sent"
+            response = Validator.check_value(receiverId, subject, message)
+            if response:
+                return response
             message_data = {
                 "status": 201,
                 "data": {
@@ -82,8 +88,7 @@ class ViewMessage(MethodView):
                     "status": status,
                     "subject": subject,
                     "senderId": senderId,
-                    "receiverId": receiverId,
-                    "parentMessageId": parentMessageId
+                    "receiverId": receiverId
                 }
             }
             if not senderId:
@@ -93,7 +98,7 @@ class ViewMessage(MethodView):
                 messages.append(message_data)
             return jsonify(message_data), 200
         if request.method == "GET":
-            if len(messages) == 0:
+            if not messages:
                 return jsonify({"message": "Inbox is empty!!"})
             else:
                 return json.dumps(messages)
@@ -108,7 +113,7 @@ class ViewMessage(MethodView):
 
     @app.route('/api/v1/messages/<int:id>', methods=['GET', 'DELETE'])
     def get_single_message_delete(id):
-            if len(messages) == 0:
+            if not messages:
                 return jsonify({"message": "Inbox is empty!!"}), 404
             if not isinstance(id, int):
                     return jsonify({"error": "invalid"}), 400
@@ -123,7 +128,7 @@ class ViewMessage(MethodView):
 
     @app.route('/api/v1/messages/sent', methods=['GET'])
     def sent_message():
-        if len(messages) == 0:
+        if not messages:
             return jsonify({"error": "no messages found!!"}), 404
         if ['status'] == 'sent' and ["userid"] == userid:
             return jsonify({"error": "no messages by  user found!!"}), 404
