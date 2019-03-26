@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 from validate_email import validate_email
 
 
-class Validator:
+class Validator:  # pragma: no cover
 
     def validate_string(item1, item2):
         if item1 == "" or item2 == "":

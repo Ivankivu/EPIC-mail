@@ -29,6 +29,14 @@ class TestMessage(unittest.TestCase):
             }
         }
 
+    def test_instantiation(self):
+        self.assertIsInstance(self.object, Message)
+    
+    def test_index_welcome_message(self):
+        result = self.client.get('/',
+                                 content_type='application/json')
+        self.assertEqual(200, result.status_code, msg="welcome to Epic mail")
+
     def test_send_message(self):
         result = self.client.post('api/v1/messages',
                                   json=self.message_data)

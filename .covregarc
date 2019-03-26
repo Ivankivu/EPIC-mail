@@ -22,4 +22,4 @@ omit =
     */app/api/models/__init__.py/*
     */app/api/tests/__init__.py/*
     */app/api/views/__init__.py/*
-    */app/utils.py/*
+    */app/utils.py

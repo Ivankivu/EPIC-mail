@@ -1,5 +1,5 @@
 from flask import Flask
-from app.config import env_config
+from app.config import env_config 
 
 app = Flask(__name__)
 

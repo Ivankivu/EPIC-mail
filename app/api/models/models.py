@@ -39,7 +39,7 @@ class Message:
         self.createdOn = createdOn
         self.data = data
 
-    def get_unread(self):
+    def get_unread(self):  # pragma: no cover
         unread_messages = [
             message for message in messages if
             message["receiverId"] == self.receiverId]
