@@ -1,4 +1,5 @@
 import os
+import secrets
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -33,9 +34,8 @@ class ProductionConfig(Config):
 
     DEBUG = False
 
-
-app_config = {
-    'development': DevelopmentConfig,
-    'testing': TestingConfig,
-    'production': ProductionConfig
-}
+env_config = dict(
+    development=DevelopmentConfig,
+    testing=TestingConfig,
+    production=ProductionConfig
+)

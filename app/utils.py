@@ -1,51 +1,51 @@
 import string
-from flask import Flask
+from flask import Flask, jsonify
+from validate_email import validate_email
 
 
-class Validator:
+class Validator:  # pragma: no cover
 
-    def auto_id(item_id, list):
-        global id
-        if len(list) == 0:
-            id = len(list)+1
-        if len(list) > 0:
-            last_item = (list)[-1]
-            id = len(last_item) + 1
-        else:
-            id = 1
-        return id
+    def validate_string(item1, item2):
+        if item1 == "" or item2 == "":
+            return jsonify({"error": "value is empty!!"})
+        if item1 == " " and item2 == " ":
+            return jsonify({"error": "Name cannot be spaces"})
+        if not isinstance(item1, str) or not isinstance(item2, str):
+            return jsonify({"error": "Name must be a string"})
+        if item1.startswith(string.digits) or item2.startswith(string.digits):
+            return jsonify({"error": "Name cannot start with a number"})
 
-    def is_empty(list):
-        if len(list) == 0:
-            return jsonify({'message': 'empty list'})
+    def check_validation(email):
+        is_valid = validate_email(email)
+        if not is_valid:
+            return jsonify({"error": "invalid email!!"}), 400
 
-    def doesnot_exist(item):
-        if not item or len(item) == 0:
-            return jsonify({
-                'message': 'Sorry! Item should at least have three characters'
-            }), 400
+    def check_value(item1, item2, item3):
+        if isinstance(item1, str):
+            return jsonify({"error": "ID must be of type integer"}), 400
+        if isinstance(item2, int) or isinstance(item3, int):
+            return jsonify({"error": "content should be a string"}), 400
+        if (type(item2) != str or (type(item2) != str)):
+            return jsonify({"error": "invalid value!"}), 400
+        if not item2 or not item3:
+            return jsonify({"error": "invalid value!"}), 400
+        if (item2 == " ") or (item3 == " "):
+            return jsonify({"error": "invalid space!"}), 400
+        if not item1:
+            return jsonify({"error": "invalid value!"}), 400
 
-    def is_not_integer(item):
-        if type(item) == int:
-            return jsonify({
-                'message': 'Sorry item should be an integer'
-            }), 400
-
-    def is_negative(item):
-        if item in item_list:
-            if item['item_id'] != item['item_id']:
-                item_list.append(item)
-
-    def get_timestamp():
-        return datetime.now().strftime(("%Y-%m-%d %H:%M:%S"))
-
-    def check_dict(dict):
-        items = list()
-        item = dict()
-        for item in items:
-            if item['item'] == '':
-                return jsonify({'message': 'empty list'})
-            if isspace(item):
-                return jsonify({'message': 'empty list'})
-            if not isalpha(item):
-                return jsonify({'message': 'invalid credentials'})
+    def validate_login(item1, item2, item3):
+        if isinstance(item1, int) or isinstance(item1, int):
+            return jsonify({"error": "invalid name"}), 400
+        if (type(item1) != str or (type(item2) != str)):
+            return jsonify({"error": "invalid name!"}), 400
+        if not item1 or not item2:
+            return jsonify({"error": "invalid name!"}), 400
+        if (item1 == " ") or (item2 == " ") or (item3 == " "):
+            return jsonify({"error": "invalid space!"}), 400
+        if isinstance(item3, int) < 10000000:
+            return jsonify({"error": "Minimum length 8 characters"}), 400
+        if len(item3) < 8:
+            return jsonify({"error": "Invalid password!!"}), 400
+        if not (item3):
+            return jsonify({"error": "password field empty!!"}), 400
