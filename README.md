@@ -27,6 +27,14 @@ messages/information over the internet.
  |- view sent messages and retract a sent message||
  |- send email to individuals or groups||
 
+## login details
+
+|user account|Admin account|
+|:---:|:---:|
+|email  `ivan@gmail.com`|email  `admin@andela.ug`|
+|password  `uganda`|password  `andela256`|
+
+
 ## Built-with
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML) - Hypertext Markup Language for creating web pages and web applications.
@@ -34,16 +42,6 @@ messages/information over the internet.
 * [Javascript](https://en.wikipedia.org/wiki/JavaScript) - a high level programming language thats used to apply dynamism to elements on a web page or web application.
 
 To get started in order to view the application, Follow this [Demo](https://ivankivu.github.io/EPIC-mail/UI/)
-
-### Login as
-
-email: @andela.ug`
-password: `andela256`
-
-### Login as user
-
-email:`ivan@gmail.com`
-password:`uganda`
 
 ## EPIC mail API v1
 
