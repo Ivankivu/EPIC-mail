@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!codecov.yml
+!template.latex
+!.Procfile
+!README.md
+!run.py
+!runtime.txt
+!setup.py
+# etc...
+
+# ...even if they are in subdirectories
+!*/app/__pycache__
+!*/app/api/__pycache__
+!*/app/__pycache__
+!*/app/api/models/__pycache__
+*/app/api/views/__pycache__
+
+# if the files to be tracked are in subdirectories
+!*/UI*
+!*/app*
