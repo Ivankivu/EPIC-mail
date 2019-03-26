@@ -132,7 +132,7 @@ Tests can be run locally with the following commands:
 | GET |[/api/v1/messages/sent](https://epicmail-v1.herokuapp.com/api/v1/messages/sent)| user can get all user's sent messages||
 | DELETE |[/api/v1/messages/(int:messageId)](https://epicmail-v1.herokuapp.com/api/v1/messages/1)| user can delete a specific user's message by ID||
 
-## Authors
+## Author
 
 * **Ivan Kivumbi** - *Initial work* - [FastFoodFast](https://github.com/Ivankivu/Fast-Food-Fast) | [Sendit](https://github.com/Ivankivu/SendIT)
 
