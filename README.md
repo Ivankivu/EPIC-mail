@@ -34,6 +34,7 @@ messages/information over the internet.
 |email `ivan@gmail.com`||
 |password `brenda`||
 
+
 ## Built-with
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML) - Hypertext Markup Language for creating web pages and web applications.
@@ -61,7 +62,5 @@ Clone this Repository
 `$ cd EPIC-mail`
 
 Then select develop branch
-
-## Author
 
 Ivan Kivumbi
