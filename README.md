@@ -125,7 +125,7 @@ Tests can be run locally with the following commands:
 | ------- | ----- | ------------- |-------|
 | POST | [/api/v1/auth/signup](https://epicmail-v1.herokuapp.com/api/v1/auth/signup) | The user can signup a new account| |
 | POST | [/api/v1/auth/login](https://epicmail-v1.herokuapp.com/api/v1/auth/login) | The user can login with valid credentials| |
-| POST | [/api/v1/messages](https://epicmail-v1.herokuapp.com/api/v1/messages) |The user can createand send a message| |
+| POST | [/api/v1/messages](https://epicmail-v1.herokuapp.com/api/v1/messages) |The user can create and send a message| |
 | GET |[/api/v1/messages](https://epicmail-v1.herokuapp.com/api/v1/messages)| Only the can get all user's' messages recieved||
 | GET |[/api/v1/messages/(int:messageId)](https://epicmail-v1.herokuapp.com/api/v1/messages/1)| user can get a specific user's message by ID||
 | GET |[/api/v1/messages/unread](https://epicmail-v1.herokuapp.com/api/v1/messages/unread)| user can get all user's unread messages||
