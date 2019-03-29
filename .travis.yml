@@ -1,0 +1,21 @@
+language: python
+python:
+  - "3.6"
+
+env:
+  global:
+    - APP_SETTINGS=testing
+    - CODECOV_TOKEN="ebe9b6ea-c9ac-46a1-b7c7-e989d8844e88"
+    - CC_TEST_REPORTER_ID="2102a60df287e9842db6ef13994cdfc00d0c4306515209fffb86a09021b172a4"
+
+install:
+  - "pip install -r requirements.txt"
+  - "pip install coveralls"
+
+script:
+  - python3 -m pytest -v --cov app --cov-report term-missing
+  - coverage report
+
+after_success:
+  - coveralls
+  - codecov

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS  users(user_id SERIAL PRIMARY KEY, first_name VARCHAR(50) NOT NULL, last_name VARCHAR(240) NOT NULL, user_email VARCHAR(35) NOT NULL UNIQUE, user_password VARCHAR(240) NOT NULL, user_role BOOLEAN NOT NULL DEFAULT FALSE, registered_at TIMESTAMP DEFAULT NOW());        
+CREATE TABLE IF NOT EXISTS  messages(message_id SERIAL PRIMARY KEY, subject VARCHAR(240) NOT NULL, message VARCHAR(1000) NOT NULL, receiverId integer NOT NULL, senderId integer references users(user_id), status VARCHAR(240) NOT NULL, createdOn TIMESTAMP DEFAULT NOW());
+CREATE TABLE IF NOT EXISTS  groups(group_id SERIAL PRIMARY KEY, group_name VARCHAR(50) NOT NULL, user_role boolean DEFAULT FALSE, users integer ARRAY);
+-- CREATE TABLE IF NOT EXISTS  members(member_id SERIAL PRIMARY KEY, group_name varchar references groups, user_role BOOLEAN references users(user_role));
